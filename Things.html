@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>things - viminaria</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
+    
+    <!-- Custom styles for this template -->
+    <link href="css/full.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <!-- This is the header -->
+          <h1>viminaria</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.html">about</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Things.html">things
+                <span class="sr-only">(current)</span>
+              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="Calendar.html">calendar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container-fluid main">
+  
+  <!-- content -->
+  <h2>things</h2>
+  <h2 id="heading">random string here</h2>
+
+  <a href="Things.html" class="button button1 btn">refresh</a>
+  <button class="btn button1" onclick="addText()">get random string</button>
+  <button class="btn button1" onclick="removeText()">remove string</button>
+  <button class="btn button1" onclick="startVideo()">press me</button>
+    <div class="spoopy">
+      <iframe id="spoopyvideo" src="" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <div class="container-fluid object">
+      <div id="red" class="size_l"></div>
+      <div id="blue" class="size_l"></div>
+      <div class="buttoncontainer">
+        <button class="btn button2" onclick="toggle('red', 'blue')">swapcolor</button>
+      </div>
+    </div>
+    
+    <div class="container-fluid object">
+    <button class="btn button2"onclick="calc()">Hur många år kvar i skolan?</button>
+    <p id="finaltext"></p>
+    </div>
+  </div>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; jesper timonen 2017</span>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
+    <script src="spoopy.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
