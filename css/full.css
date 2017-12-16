@@ -57,6 +57,13 @@ h3 {
   width: 80%
 }
 
+#finaltext {
+  color: #fff;
+  font-size: 1rem;
+  padding: 5px;
+  width: 80%
+}
+
 #spoopyvideo {
   width:0px;
   height:0px;
