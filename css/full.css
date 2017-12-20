@@ -194,3 +194,46 @@ h3 {
 {
 	background-color: #1f1f1f;
 }
+
+.slideshow {
+  position: absolute;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.button-right {
+  position: fixed;
+  right: 0px;
+  background-color: rgba(31, 31, 31, 0.9);
+  border: none;
+  color: #fff;
+  bottom: 40px;
+  top: 60px;
+  z-index: 10;
+}
+
+.button-left {
+  position: fixed;
+  left: 0px;
+  background-color: rgba(31, 31, 31, 0.9);
+  border: none;
+  color: #fff;
+  bottom: 40px;
+  top: 60px;
+  z-index: 10;
+}
+
+#slideimg {
+  display: block;
+  margin: auto;
+  min-width: 50%;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.slidebackground {
+  background-color: black;
+}
