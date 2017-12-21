@@ -10,6 +10,11 @@ body {
   margin-bottom:40px;
 }
 
+#headerimg {
+  width: 28px;
+  margin: 0px;
+}
+
 body::-webkit-scrollbar{
   display: none;
 }
@@ -36,6 +41,7 @@ body::-webkit-scrollbar{
 h1 {
   color: #fff;
   margin:auto;
+  margin-left: 70px;
   font-size: 2rem;
 }
 
