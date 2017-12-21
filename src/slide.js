@@ -1,8 +1,8 @@
 var x = 1;
 var changeslide = document.getElementById('slide');
 var bildtext = [
-["Googly Eyes Necromancer"],
-["Redout"]
+['<p id="picturetext">Googly Eyes Necromancer</p>'],
+['<p id="picturetext">Redout 4K</p>']
 ];
 
 function prevImg() {
