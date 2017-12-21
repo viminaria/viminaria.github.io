@@ -7,6 +7,15 @@ var pictext = [
 ['<p id="picturetext">Placeholder 4</p>'],
 ['<p id="picturetext">Placeholder 5</p>'],
 ];
+
+$("body").keydown(function(e) {
+	if(e.which == 37) { // left     
+		$(".button-left").trigger("click");
+	}
+	else if(e.which == 39) { // right     
+		$(".button-right").trigger("click");
+	}
+});
 	
 function prevImg() {
 	if (x > 1) {
