@@ -204,7 +204,7 @@ h3 {
   margin: auto;
   max-width: 100%;
   text-align: center;
-  height: 85%;
+  height: 90%;
 }
 
 .button-right {
@@ -236,16 +236,16 @@ h3 {
 }
 
 #slide {
-  box-sizing: content-box;
   margin:auto;
-  height:90%;
-  max-width:60%;
+  height:auto;
+  max-width:70%;
 }
 
 #slideimg {
   display: block;
   margin: auto;
   margin-bottom: 2px;
+  min-width:400px;
   max-width:100%;
   min-height:100%;
   -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.3);
@@ -253,8 +253,11 @@ h3 {
 }
 
 #picturetext {
+  position:relative;
   color:#fff;
   margin:0;
+  padding:1px;
+  text-shadow: 2px 2px 4px black;
 }
 
 p.centerheader {
