@@ -204,7 +204,7 @@ h3 {
   margin: auto;
   max-width: 100%;
   text-align: center;
-  height: 90%;
+  height: 85%;
 }
 
 .button-right {
@@ -216,6 +216,7 @@ h3 {
   bottom: 40px;
   top: 60px;
   z-index: 10;
+  width:40px;
 }
 
 .button-left {
@@ -227,15 +228,26 @@ h3 {
   bottom: 40px;
   top: 60px;
   z-index: 10;
+  width:40px;
+}
+
+.button-left:focus, .button-right:focus {
+  outline: none;
+}
+
+#slide {
+  box-sizing: content-box;
+  margin:auto;
+  height:90%;
+  max-width:60%;
 }
 
 #slideimg {
   display: block;
   margin: auto;
   margin-bottom: 2px;
-  min-height: 450px;
-  max-width: 70%;
-  max-height: 450px; 
+  max-width:100%;
+  min-height:100%;
   -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.3);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
