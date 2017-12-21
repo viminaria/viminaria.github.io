@@ -133,7 +133,7 @@ h3 {
   top: 80px;
   height: 1500px;
   margin-bottom: 70px;
-  background-image: url(../advent/img/julkalender.jpg);
+  background-image: url(../img/julkalender.jpg);
   background-position: top;
   background-size: 100%;
   box-shadow: 10px 10px 30px 0px #000;
@@ -180,7 +180,8 @@ h3 {
 
 .twitterbox::-webkit-scrollbar-track
 {
-	-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
   background-color: #F5F5F5;
 }
 
