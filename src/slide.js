@@ -3,9 +3,9 @@ var changeslide = document.getElementById('slide');
 var pictext = [
 ['<p id="picturetext">Googly Eyes Necromancer</p>'],
 ['<p id="picturetext">Redout 4K</p>'],
-['<p id="picturetext">Placeholder 3</p>'],
-['<p id="picturetext">Placeholder 4</p>'],
-['<p id="picturetext">Placeholder 5</p>'],
+['<p id="picturetext">Redout 3x1080p Europa</p>'],
+['<p id="picturetext">Redout 3x1080p Alaska</p>'],
+['<p id="picturetext">Redout 3x1080p Volcano</p>'],
 ];
 
 $("body").keydown(function(e) {
