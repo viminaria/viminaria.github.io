@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>pictures - viminaria</title>
+    <title>home - viminaria</title>
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
@@ -17,7 +17,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="https://viminaria.github.io">
+        <a class="navbar-brand" href="index.html">
           <!-- This is the header -->
           <h1>viminaria</h1>
         </a>
@@ -26,33 +26,33 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="index.html">home
+                <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="calendar.html">calendar</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="pictures.html">pictures</a>
-                <span class="sr-only">(current)</span>
-              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="content container-fluid">
+    <div class="content">
+      <div class="container-fluid main">
         <!-- content -->
-        <button class="button-left" onclick="prevImg()">&#10094;</button>
-        <button class="button-right" onclick="nextImg()">&#10095;</button>
-
-      <div class="container-fluid slideshow">
-        <div class="container-fluid" id="slide">
-        </div>      
+        <div class="container-fluid thing" id="questionarea">
+          <p class="centerheader" id="scoreboard">you have 0 fish</p>
+          <p class="centerheader" id="question">get your fishies here</p>
+          <button class="btn answerbox" id="answer1" onclick="userAnswer(1)"></button>
+          <button class="btn answerbox" id="answer2" onclick="userAnswer(2)"></button>
+          <button class="btn answerbox" id="answer3" onclick="userAnswer(3)"></button>
+        </div>
       </div>
     </div>
-  </div>
     <footer class="footer">
       <div class="container">
         <span class="text-muted">&copy; viminaria 2017</span>
@@ -63,6 +63,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
-    <script src="src/slide.js"></script>
+    <script src="src/thing.js"></script>
   </body>
 </html>

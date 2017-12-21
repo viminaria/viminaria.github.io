@@ -1,4 +1,4 @@
-var x = 1;
+var x = 0;
 var changeslide = document.getElementById('slide');
 var pictext = [
 ['<p id="picturetext">Googly Eyes Necromancer</p>'],
@@ -29,3 +29,5 @@ function nextImg() {
 		changeslide.innerHTML  = '<img src="img/' + x + '.png" id="slideimg">' + pictext[x-1] + '<p id="picturetext">' + x + '/5</p>';
 	}
 }
+
+nextImg();
