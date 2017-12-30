@@ -312,6 +312,7 @@ p.centerheader {
   background-position: center;
   text-decoration:none;
   text-shadow: 2px 2px 2px #000;
+  background-size: 100%;
 }
 
 .square:hover {
@@ -345,30 +346,31 @@ p.centerheader {
 /* STYLING OF INDIVIDUAL BACKGROUNDS FOR POETOOLS BOXES */
 .square1 {
   background-image: url(../img/poetools/square1.jpg);
-  background-size: 100%;
 }
-
 .square2 {
   background-image: url(../img/poetools/square2.jpg);
-  background-size: 100%;
 }
-
 .square3 {
   background-image: url(../img/poetools/square3.jpg);
-  background-size: 100%;
 }
-
 .square4 {
   background-image: url(../img/poetools/square4.jpg);
-  background-size: 100%;
 }
-
 .square5 {
   background-image: url(../img/poetools/square5.jpg);
-  background-size: 100%;
 }
-
 .square6 {
   background-image: url(../img/poetools/square6.jpg);
-  background-size: 100%;
+}
+.square7 {
+  background-image: url(../img/poetools/square7.jpg);
+}
+.square8 {
+  background-image: url(../img/poetools/square8.jpg);
+}
+.square9 {
+  background-image: url(../img/poetools/square9.jpg);
+}
+.square10 {
+  background-image: url(../img/poetools/square10.jpg);
 }
