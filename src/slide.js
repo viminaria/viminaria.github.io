@@ -20,22 +20,22 @@ $("body").keydown(function(e) {
 function prevImg() {
 	if (x > 1) {
 		x--;
-		changeslide.innerHTML  = '<img src="img/' + x + '.png" id="slideimg">' + pictext[x-1] + '<p id="picturetext">' + x + '/5</p>';
+		changeslide.innerHTML  = '<img src="img/gallery/' + x + '.png" id="slideimg">' + pictext[x-1] + '<p id="picturetext">' + x + '/5</p>';
 	}
 	else if (x = 1) {
 		x = 5;
-		changeslide.innerHTML  = '<img src="img/' + x + '.png" id="slideimg">' + pictext[x-1] + '<p id="picturetext">' + x + '/5</p>';
+		changeslide.innerHTML  = '<img src="img/gallery/' + x + '.png" id="slideimg">' + pictext[x-1] + '<p id="picturetext">' + x + '/5</p>';
 	}
 }
 
 function nextImg() {
 	if (x < 5) {
 		x++;
-		changeslide.innerHTML  = '<img src="img/' + x + '.png" id="slideimg">' + pictext[x-1] + '<p id="picturetext">' + x + '/5</p>';
+		changeslide.innerHTML  = '<img src="img/gallery/' + x + '.png" id="slideimg">' + pictext[x-1] + '<p id="picturetext">' + x + '/5</p>';
 	}
 	else if (x = 5) {
 		x = 1;
-		changeslide.innerHTML  = '<img src="img/' + x + '.png" id="slideimg">' + pictext[x-1] + '<p id="picturetext">' + x + '/5</p>';
+		changeslide.innerHTML  = '<img src="img/gallery/' + x + '.png" id="slideimg">' + pictext[x-1] + '<p id="picturetext">' + x + '/5</p>';
 	}
 }
 

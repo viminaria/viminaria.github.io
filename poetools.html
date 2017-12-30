@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>pictures - viminaria</title>
+    <title>poetools - viminaria</title>
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
@@ -17,7 +17,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="https://viminaria.github.io">
+        <a class="navbar-brand" href="index.html">
           <!-- This is the header -->
           <h1><img align="middle" src="img/viminaria.svg" id="headerimg"> viminaria</h1>
         </a>
@@ -27,37 +27,68 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">home
-              </a>
+              <a class="nav-link" href="index.html">home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="calendar.html">calendar</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="pictures.html">pictures</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="poetools.html">poetools
                 <span class="sr-only">(current)</span>
               </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="poetools.html">poetools</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="content container-fluid">
+    <div class="content">
+      <div class="container-fluid main">
         <!-- content -->
-        <button class="button-left" onclick="prevImg()">&#10094;</button>
-        <button class="button-right" onclick="nextImg()">&#10095;</button>
-
-      <div class="container-fluid slideshow">
-        <div class="container-fluid" id="slide">
-        </div>      
+        <h2 style="text-align: center;">some useful poe tools</h2>
+        
+        <a class="square square1" href="https://www.pathofexile.com" target="_blank">
+          <div id="poebox">
+              <p id="aligntop">pathofexile.com</p>
+              <p id="alignbottom">The Official Website for Path of Exile</p>
+          </div>
+        </a>
+        <a class="square square2" href="https://pathofexile.gamepedia.com/" target="_blank">
+          <div id="poebox">
+              <p id="aligntop">pathofexile.gamepedia.com</p>
+              <p id="alignbottom">Path of Exile Community Wiki</p>
+          </div>
+        </a>
+        <a class="square square3" href="http://poe.trade" target="_blank">
+          <div id="poebox">
+              <p id="aligntop">poe.trade</p>
+              <p id="alignbottom">Path of Exile Trade Index</p>
+          </div>
+        </a>
+        <a class="square square4" href="http://poeaffix.net" target="_blank">
+          <div id="poebox">
+              <p id="aligntop">poeaffix.net</p>
+              <p id="alignbottom">Path of Exile Item Mod List</p>
+          </div>
+        </a>
+        <a class="square square5" href="https://www.reddit.com/r/pathofexile" target="_blank">
+          <div id="poebox">
+              <p id="aligntop">r/pathofexile</p>
+              <p id="alignbottom">Path of Exile Subreddit</p>
+          </div>
+        </a>
+        <a class="square square6" href="http://poelab.com" target="_blank">
+          <div id="poebox">
+              <p id="aligntop">poelab.com</p>
+              <p id="alignbottom">Path of Exile Labyrinth Layouts</p>
+          </div>
+        </a>
       </div>
     </div>
-  </div>
     <footer class="footer">
-      <div class="container">
+            <div class="container">
         <span class="text-muted">&copy; viminaria 2017</span>
       </div>
     </footer>
@@ -66,6 +97,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
-    <script src="src/slide.js"></script>
   </body>
 </html>
