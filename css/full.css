@@ -302,11 +302,11 @@ p.centerheader {
 .square {
   float:left;
   position: relative;
-  width: 19%;
-  padding-bottom: 19%; /* = width for a 1:1 aspect ratio */
+  width: 16%;
+  padding-bottom: 16%; /* = width for a 1:1 aspect ratio */
   overflow:hidden;
   background-color: #1f1f1f;
-  margin:0.5%;
+  margin:0.333%;
   color:#fff;
   text-align: center;
   background-position: center;
@@ -333,14 +333,14 @@ p.centerheader {
 #aligntop {
   position: absolute;
   top: 5px;
-  font-size: 2vmin;
+  font-size: 1.8vmin;
 }
 
 #alignbottom {
   position: absolute;
   bottom: 5px;
   margin: auto;
-  font-size: 3vmin;
+  font-size: 2.7vmin;
 }
 
 /* STYLING OF INDIVIDUAL BACKGROUNDS FOR POETOOLS BOXES */
@@ -373,4 +373,7 @@ p.centerheader {
 }
 .square10 {
   background-image: url(../img/poetools/square10.jpg);
+}
+.square11 {
+  background-image: url(../img/poetools/square11.jpg);
 }
