@@ -270,11 +270,11 @@ h3 {
   text-shadow: 2px 2px 4px black;
 }
 
-p.centerheader {
+.centerheader {
   text-align: center;
   font-size: 2rem;
   color: #fff;
-  padding: 5px;
+  padding: 15px;
 }
 
 /* FORMATTING FOR QUIZ ITEMS */
@@ -320,6 +320,29 @@ p.centerheader {
   box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
   background-blend-mode: screen;
 }
+@media (max-width: 1250px) {
+  .square {
+    width: 19%;
+    padding-bottom: 19%; /* = width for a 1:1 aspect ratio */
+    margin:0.5%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .square {
+    width: 24%;
+    padding-bottom: 24%; /* = width for a 1:1 aspect ratio */
+    margin:0.5%;
+  }
+}
+
+@media (max-width: 780px) {
+  .square {
+    width: 31%;
+    padding-bottom: 31%; /* = width for a 1:1 aspect ratio */
+    margin:1%;
+  }
+}
 
 /* STYLING OF TEXT INSIDE POETOOLS BOXES */
 #poebox {
@@ -333,7 +356,7 @@ p.centerheader {
 #aligntop {
   position: absolute;
   top: 5px;
-  font-size: 2vmin;
+  font-size: 1.6vmin;
 }
 
 #alignbottom {
@@ -377,3 +400,14 @@ p.centerheader {
 .square11 {
   background-image: url(../img/poetools/square11.jpg);
 }
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
