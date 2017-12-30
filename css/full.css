@@ -333,14 +333,14 @@ p.centerheader {
 #aligntop {
   position: absolute;
   top: 5px;
-  font-size: 1.8vmin;
+  font-size: 2vmin;
 }
 
 #alignbottom {
   position: absolute;
   bottom: 5px;
   margin: auto;
-  font-size: 2.7vmin;
+  font-size: 2.5vmin;
 }
 
 /* STYLING OF INDIVIDUAL BACKGROUNDS FOR POETOOLS BOXES */
