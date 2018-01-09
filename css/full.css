@@ -400,6 +400,9 @@ h3 {
 .square11 {
   background-image: url(../img/poetools/square11.jpg);
 }
+.square12 {
+  background-image: url(../img/poetools/square12.jpg);
+}
 
 .clearfix:after {
 	visibility: hidden;
