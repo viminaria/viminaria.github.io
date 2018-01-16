@@ -61,6 +61,12 @@ h3 {
   padding: 5px;
 }
 
+#whitetext {
+  color: #fff;
+  font-size: 1rem;
+  padding: 5px;
+}
+
 #maintext {
   color: #fff;
   font-size: 1rem;
@@ -116,6 +122,11 @@ h3 {
   margin-top:10px;
   position:relative;
   top:30px;
+}
+
+.cardimg {
+  width: 96%;
+  margin: 2%;
 }
 
 .footer {
