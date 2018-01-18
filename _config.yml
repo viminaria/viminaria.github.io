@@ -3,3 +3,4 @@ defaults:
     scope:
       path: ""
       type: "pages"
+      permalink: /
