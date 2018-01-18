@@ -345,7 +345,7 @@ h3 {
 }
 
 /* STYLING OF TEXT INSIDE POETOOLS BOXES */
-#poebox {
+.poebox {
   position:absolute;
   height:90%; /* = 100% - 2*10% padding */
   width:90%; /* = 100% - 2*5% padding */
@@ -353,13 +353,13 @@ h3 {
   text-align: center;
 }
 
-#aligntop {
+.aligntop {
   position: absolute;
   top: 5px;
   font-size: 1.7vmin;
 }
 
-#alignbottom {
+.alignbottom {
   position: absolute;
   bottom: 5px;
   margin: auto;
