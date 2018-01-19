@@ -207,9 +207,6 @@ h3 {
 /* FORMATTING FOR SLIDESHOW ITEMS */
 
 .slideshow {
-  position:absolute;
-  left:0px;
-  top: 60px;
   display: block;
   margin: auto;
   max-width: 100%;
