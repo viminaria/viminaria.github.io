@@ -118,17 +118,5 @@ document.onkeydown = function(e) {
         case 71:
         playAudio(25);
         break;
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

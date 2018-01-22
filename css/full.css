@@ -538,5 +538,10 @@ STYLING FOR SYNTH
   margin: 0.2%;
   background-color: white;
   color: black;
+  user-select: none;
   float:left
+}
+
+.keyboard-key:hover {
+  background-color: #afafaf
 }
