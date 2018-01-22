@@ -451,23 +451,22 @@ h3 {
   overflow: hidden;
 }
 
+.parallax-window, .parallax-window-secondary, .parallax-window-bottom {
+  background: transparent;
+  position: relative;
+}
+
 @media (min-width: 1200px) {
   .parallax-window {
     min-height: 120px;
-    background: transparent;
-    position: relative;
   }
   
   .parallax-window-secondary {
     min-height: 200px;
-    background: transparent;
-    position: relative;
   }
 
   .parallax-window-bottom {
     min-height: 120px;
-    background: transparent;
-    position: relative;
   }
   
   .portcontent {
@@ -480,20 +479,14 @@ h3 {
 @media (max-width: 1200px) {
   .parallax-window {
     min-height: 100px;
-    background: transparent;
-    position: relative;
   }
   
   .parallax-window-secondary {
     min-height: 220px;
-    background: transparent;
-    position: relative;
   }
 
   .parallax-window-bottom {
     min-height: 150px;
-    background: transparent;
-    position: relative;
   }
   
   .portcontent {
@@ -506,20 +499,14 @@ h3 {
 @media (max-width: 720px) {
   .parallax-window {
     min-height: 120px;
-    background: transparent;
-    position: relative;
   }
   
   .parallax-window-secondary {
     min-height: 100px;
-    background: transparent;
-    position: relative;
   }
 
   .parallax-window-bottom {
     min-height: 80px;
-    background: transparent;
-    position: relative;
   }
 
   .portcontent {
@@ -536,18 +523,19 @@ STYLING FOR SYNTH
 */
 
 #keyboard-body {
-  top: 30%;
+  top: 80px;
+  position: relative;
   padding: 0 5%;
-  padding-top: 5%;
+  padding-top: 2%;
   padding-bottom: 20%;
   height: 20%;
-  background-color:black;
+  background-color:#1f1f1f;
 }
 
 .keyboard-key {
-  padding:10% 0px;
-  width: 3.76%;
-  margin: 0.12%;
+  padding: 9% 1.5%;
+  width: 3.6%;
+  margin: 0.2%;
   background-color: white;
   color: black;
   float:left

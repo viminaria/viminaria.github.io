@@ -1,5 +1,5 @@
 for(i=1; i<=25; i++) {
-    $("#keyboard-body").append('<div id="' + i + '" class="keyboard-key" onclick="playAudio(this.id)">' + i + '</div>')
+    $("#keyboard-body").append('<div id="' + i + '" class="keyboard-key jumbotron" onclick="playAudio(this.id)">' + i + '</div>')
 }
 
 var audPlayer = document.getElementById("audioElement")
@@ -7,6 +7,12 @@ var audPlayer = document.getElementById("audioElement")
 function playAudio(nbr) {
     audPlayer.src = "src/sound/sound"+ nbr + ".mp3";
     audPlayer.play();
+    document.getElementById(nbr).style.boxShadow = "0px 0px 40px #000 inset"
+    
+    setTimeout(resetKey, 1000);
+    function resetKey(){
+        document.getElementById(nbr).style.boxShadow = ""
+    }
 }
 
 document.onkeydown = function(e) {
@@ -49,66 +55,67 @@ document.onkeydown = function(e) {
         playAudio(9);
         break;
             
-        case 81:
+        case 48:
         playAudio(10);
         break;
             
-        case 87:
+        case 81:
         playAudio(11);
         break;
             
-        case 69:
+        case 87:
         playAudio(12);
         break;
             
-        case 82:
+        case 69:
         playAudio(13);
         break;          
 
-        case 84:
+        case 82:
         playAudio(14);
         break;
             
-        case 81:
+        case 84:
         playAudio(15);
         break;
             
-        case 81:
+        case 89:
         playAudio(16);
         break;
             
-        case 81:
+        case 85:
         playAudio(17);
-        break;            
-        case 81:
+        break; 
+
+        case 73:
         playAudio(18);
         break;
             
-        case 81:
+        case 79:
         playAudio(19);
         break;
             
-        case 81:
+        case 80:
         playAudio(20);
         break;
             
-        case 81:
+        case 65:
         playAudio(21);
         break;
 
-        case 81:
+        case 83:
         playAudio(22);
         break;
             
-        case 81:
+        case 68:
         playAudio(23);
         break;
             
-        case 81:
+        case 70:
         playAudio(24);
         break;
             
-        case 81:
+        case 71:
         playAudio(25);
         break;
 
