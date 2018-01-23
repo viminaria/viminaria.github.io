@@ -9,6 +9,13 @@ body {
   background-color: #323232;
 }
 
+.container-fluid {
+  padding-right:0px;
+  padding-left:0px;
+  margin-right:0px;
+  margin-left:0px
+}
+
 #headerimg {
   width: 28px;
   margin: 0px;
@@ -545,3 +552,32 @@ STYLING FOR SYNTH
 .keyboard-key:hover {
   background-color: #afafaf
 }
+
+/*
+
+AUDIOPLAYER
+
+*/
+
+#audioplayer-nav {
+  background-color: rgb(25, 25, 25);
+  color: hotpink;
+}
+
+#audioplayer-playlist {
+  background-color: rgb(40, 40, 40);
+  color: hotpink;
+}
+
+#audioplayer-playlist::-webkit-scrollbar{
+  display: none;
+}
+
+#audioplayer-content {
+  position:absolute;
+  top:60px;
+  bottom:40px;
+  background-color:rgba(25, 25, 25, 0.9);
+  overflow:hidden;
+}
+
