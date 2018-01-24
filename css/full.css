@@ -41,8 +41,6 @@ body::-webkit-scrollbar{
   padding: 10px;
   margin: auto;
   max-width: 95%;
-  margin-bottom: 40px;
-  height:100%;
 }
 
 h1 {
@@ -373,6 +371,12 @@ h3 {
 }
 
 /* STYLING OF INDIVIDUAL BACKGROUNDS FOR POETOOLS BOXES */
+.poebody {
+  margin-bottom: 40px;
+  position:relative;
+  top:80px;
+  overflow:hidden;
+}
 .square1 {
   background-image: url(../img/poetools/square1.jpg);
 }
