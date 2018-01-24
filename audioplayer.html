@@ -59,9 +59,17 @@
           <p>hej</p>
           <p>hej</p>
           <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
         </div>
         <div class="col-6" id="audioplayer-nav">
-          <div class="audioimage"><img src="img/gallery/2.png"></img></div>
+          <div class="audioimage-container"><img class="audioimage" src="img/gallery/2.png"></img></div>
           <div class="audiotext">VÄLJ EN SÅNG FÖR ATT STARTA</div>
         </div>
         <div class="col-3" style="background-color: rgba(40, 40, 40, 0.9)">
@@ -73,17 +81,7 @@
               <i class="material-icons">play_arrow</i>
               <i class="material-icons">skip_next</i>
               
-              <input class="volume-slider" id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
-              
-              <script>
-                  function SetVolume(val)
-                  {
-                      var player = document.getElementById('audioElement');
-                      console.log('Before: ' + player.volume);
-                      player.volume = val / 100;
-                      console.log('After: ' + player.volume);
-                  }
-              </script>
+              <input class="volume-slider" id="vol-control" type="range" min="0" max="100" step="1"></input>
             </div>
           </div>
         </div>

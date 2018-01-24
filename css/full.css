@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
+
 .materials-icons {
   font-family: MaterialDesign;
 }
@@ -9,7 +10,7 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  font-family: Ubuntu;
+  font-family: 'Ubuntu';
   background-color: #323232;
   overflow-x: hidden;
 }
@@ -561,4 +562,11 @@ AUDIOPLAYER
 .audioimage {
   margin: auto;
   background-color: black;
+  width:100%;
 }
+
+.audioimage-container {
+  margin: auto;
+  background-color: black;
+}
+
