@@ -294,11 +294,12 @@ h3 {
   padding: 5px;
 }
 
-.thing {
+.quizbody {
   border: solid 2px rgba(31, 31, 31, 0.9);
   padding: 10px;
   width: 800px;
   background-color: rgb(58, 117, 172);
+  margin:auto;
 }
 
 /* FORMATTING FOR POETOOLS BOXES */
