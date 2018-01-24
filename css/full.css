@@ -464,16 +464,12 @@ h3 {
 }
 
 @media (min-width: 1200px) {
-  .parallax-window {
-    min-height: 120px;
+  .parallax-window, .parallax-window-bottom {
+    min-height: 130px;
   }
   
   .parallax-window-secondary {
     min-height: 200px;
-  }
-
-  .parallax-window-bottom {
-    min-height: 120px;
   }
   
   .portcontent {
@@ -485,7 +481,7 @@ h3 {
 
 @media (max-width: 1200px) {
   .parallax-window {
-    min-height: 100px;
+    min-height: 120px;
   }
   
   .parallax-window-secondary {
@@ -505,11 +501,11 @@ h3 {
 
 @media (max-width: 720px) {
   .parallax-window {
-    min-height: 120px;
+    min-height: 100px;
   }
   
   .parallax-window-secondary {
-    min-height: 100px;
+    min-height: 120px;
   }
 
   .parallax-window-bottom {
@@ -559,14 +555,20 @@ AUDIOPLAYER
 
 */
 
+.pre-scrollable {
+  min-height: 400px;
+}
+
 #audioplayer-nav {
   background-color: rgb(25, 25, 25);
   color: hotpink;
+  padding:20px;
 }
 
 #audioplayer-playlist {
   background-color: rgb(40, 40, 40);
   color: hotpink;
+  padding:20px;
 }
 
 #audioplayer-playlist::-webkit-scrollbar{
@@ -576,8 +578,12 @@ AUDIOPLAYER
 #audioplayer-content {
   position:absolute;
   top:60px;
-  bottom:40px;
+  bottom:90px;
   background-color:rgba(25, 25, 25, 0.9);
   overflow:hidden;
+}
+
+.audioplayer-row {
+  height:100%;
 }
 
