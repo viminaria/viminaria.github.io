@@ -10,9 +10,9 @@
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
-    
     <!-- Custom styles for this template -->
     <link href="css/full.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <!-- Navigation -->
@@ -41,30 +41,54 @@
     </nav>
     <!-- content -->
     <audio id="audioElement"></audio>
-  <div class="container-fluid" id="audioplayer-content">
-    <div class="row audioplayer-row">
-      <div class="col-3" id="audioplayer-nav">
-        <p>hej</p>
-      </div>
-      <div class="col-9 pre-scrollable" id="audioplayer-playlist">
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
-        <p>hej</p>
+    <div class="container-fluid" id="audioplayer-content">
+      <div class="row audioplayer-row">
+        <div class="col-3" id="audioplayer-playlist">
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+          <p>hej</p>
+        </div>
+        <div class="col-6" id="audioplayer-nav">
+          <div class="audioimage"><img src="img/gallery/2.png"></img></div>
+          <div class="audiotext">VÄLJ EN SÅNG FÖR ATT STARTA</div>
+        </div>
+        <div class="col-3" style="background-color: rgba(40, 40, 40, 0.9)">
+        </div>
+        <div class="container-fluid player">
+          <div class="controls">
+            <div class="control-buttons">
+              <i class="material-icons">skip_previous</i>
+              <i class="material-icons">play_arrow</i>
+              <i class="material-icons">skip_next</i>
+              
+              <input class="volume-slider" id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+              
+              <script>
+                  function SetVolume(val)
+                  {
+                      var player = document.getElementById('audioElement');
+                      console.log('Before: ' + player.volume);
+                      player.volume = val / 100;
+                      console.log('After: ' + player.volume);
+                  }
+              </script>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
     <footer class="footer">
       <div class="container">
         <span class="text-muted">&copy; viminaria 2017</span>
