@@ -210,7 +210,19 @@ h3 {
   padding: 15px;
 }
 
-/* FORMATTING FOR QUIZ ITEMS */
+/* 
+
+FORMATTING FOR QUIZ
+
+*/
+
+.knuckles {
+  width:60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 
 .answerbox {
   display:block;
