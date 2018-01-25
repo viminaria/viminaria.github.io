@@ -5,7 +5,7 @@ var audioPlayer = document.getElementById("audio");
 var questions = [
 	["the devil finds you, what do you do?"],
 	["your brudda betray tribe, what do you do?"],
-	["how do you know if princess smells like ebola?"],
+	["what do you do if princess smells like ebola?"],
 	["your princess tells you to jump off a cliff, what do you do?"],
 	["woman run away from you, what you tell her?"],
 	["your bruddah click at you, what do you do?"],
