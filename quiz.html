@@ -40,14 +40,28 @@
       </div>
     </nav>
     <div class="content">
-      <div class="container-fluid main">
+      <div class="container-fluid">
         <!-- content -->
-        <div class="container-fluid quizbody jumbotron" id="questionarea">
-          <p class="centerheader" id="scoreboard">you have 0 fish</p>
-          <p class="centerheader" id="question">get your fishies here</p>
-          <button class="btn answerbox" id="answer1" onclick="userAnswer(1)"></button>
-          <button class="btn answerbox" id="answer2" onclick="userAnswer(2)"></button>
-          <button class="btn answerbox" id="answer3" onclick="userAnswer(3)"></button>
+        <audio id="bgmusic" autoplay loop></audio>
+        <audio id="audio"></audio>
+        
+        <div class="jumbotron" id="startMenu">
+          <h2 class="centerheader">Do you no da wey?</h2>
+          <button class="answerbox" onclick="startGame()">start game</button>
+        </div>
+        
+        
+        <div class="jumbotron" id="quizbody">
+          <p class="centerheader" id="scoreBox"><p>
+          <p class="centerheader" id="question"></p>
+          <button class="answerbox" id="answer1" onclick="userAnswer(1)"></button>
+          <button class="answerbox" id="answer2" onclick="userAnswer(2)"></button>
+          <button class="answerbox" id="answer3" onclick="userAnswer(3)"></button>
+        </div>
+        
+        <div class="jumbotron" id="endGame">
+          <div class="centerheader" id="scoreResult"></div>
+          <button class="answerbox" id="reload" onclick="restartGame()">try again?</button>
         </div>
       </div>
     </div>
@@ -61,6 +75,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
-    <script src="src/thing.js"></script>
+    <script src="src/quiz.js"></script>
   </body>
 </html>
