@@ -306,14 +306,6 @@ FORMATTING FOR QUIZ
   background-blend-mode: screen;
 }
 
-@media (max-width: 1250px) {
-  .square {
-    width: 19%;
-    padding-bottom: 19%; /* = width for a 1:1 aspect ratio */
-    margin:0.5%;
-  }
-}
-
 @media (max-width: 1100px) {
   .square {
     width: 24%;
