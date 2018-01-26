@@ -414,31 +414,18 @@ FORMATTING FOR QUIZ
 
 /* PORTFOLIO CSS HERE */
 
-.portheader {
-  left:10%;
-  font-size: 3rem;
-  color: #fff;
-  padding: 15px;
-}
-
-#portwhitetext {
-  color: #fff;
-  font-size: 1rem;
-  padding: 10px;
-}
-
 .cardimg {
-  width: 92%;
-  margin: 4%;
+  width: 90%;
+  margin: 5%;
 }
 
 .card {
-  max-width: 300px;
+  max-width: 350px;
+  margin: auto;
 }
 
 .card-body {
   padding: 2%;
-  margin: 0px;
 }
 
 #cardtext {
@@ -453,11 +440,11 @@ FORMATTING FOR QUIZ
 
 @media (min-width: 1200px) {
   .parallax-window, .parallax-window-bottom {
-    min-height: 130px;
+    min-height: 230px;
   }
   
   .parallax-window-secondary {
-    min-height: 200px;
+    min-height: 350px;
   }
   
   .portcontent {
@@ -465,19 +452,33 @@ FORMATTING FOR QUIZ
     padding-bottom: 6%;
     background-color: rgba(40, 40, 40, 1);
   }
+
+  .portheader {
+    left:10%;
+    font-size: 3.2rem;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  #portwhitetext {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px;
+    margin: auto;
+  }
 }
 
 @media (max-width: 1200px) {
   .parallax-window {
-    min-height: 120px;
+    min-height: 200px;
   }
   
   .parallax-window-secondary {
-    min-height: 220px;
+    min-height: 290px;
   }
 
   .parallax-window-bottom {
-    min-height: 150px;
+    min-height: 200px;
   }
   
   .portcontent {
@@ -485,25 +486,51 @@ FORMATTING FOR QUIZ
     padding-bottom: 8%;
     background-color: rgba(40, 40, 40, 1);
   }
+
+  .portheader {
+    left:10%;
+    font-size: 2.8rem;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  #portwhitetext {
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+  }
 }
 
 @media (max-width: 720px) {
   .parallax-window {
-    min-height: 100px;
+    min-height: 150px;
   }
   
   .parallax-window-secondary {
-    min-height: 120px;
+    min-height: 180px;
   }
 
   .parallax-window-bottom {
-    min-height: 80px;
+    min-height: 120px;
   }
 
   .portcontent {
     padding: 3% 5%;
     padding-bottom: 12%;
     background-color: rgba(40, 40, 40, 1);
+  }
+
+  .portheader {
+    left:10%;
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  #portwhitetext {
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 10px;
   }
 }
 
