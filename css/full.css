@@ -501,13 +501,46 @@ FORMATTING FOR QUIZ
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .parallax-window {
-    min-height: 150px;
+    min-height: 180px;
   }
   
   .parallax-window-secondary {
-    min-height: 180px;
+    min-height: 230px;
+  }
+
+  .parallax-window-bottom {
+    min-height: 150px;
+  }
+  
+  .portcontent {
+    padding: 3% 5%;
+    padding-bottom: 8%;
+    background-color: rgba(40, 40, 40, 1);
+  }
+
+  .portheader {
+    left:10%;
+    font-size: 2.7rem;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  #portwhitetext {
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 720px) {
+  .parallax-window {
+    min-height: 140px;
+  }
+  
+  .parallax-window-secondary {
+    min-height: 160px;
   }
 
   .parallax-window-bottom {
