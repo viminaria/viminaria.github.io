@@ -461,6 +461,7 @@ width: 100%;
 height: 100%;
 background-repeat: no-repeat;
 background-position: 50% 82%;
+background-size: 100%;
 }
 
 .parallax-window, .parallax-window-secondary, .parallax-window-bottom {
