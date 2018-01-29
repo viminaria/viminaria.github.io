@@ -40,48 +40,27 @@
       </div>
     </nav>
     <!-- content -->
-    <audio id="audioElement"></audio>
+    <audio id="audioelement" onEnded="nextAudio(); color();"></audio>
     <div class="container-fluid" id="audioplayer-content">
       <div class="row audioplayer-row">
-        <div class="col-3" id="audioplayer-playlist">
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-          <p>hej</p>
-        </div>
+        <div class="col-3" id="audioplayer-playlist"></div>
         <div class="col-6" id="audioplayer-nav">
-          <div class="audioimage-container"><img class="audioimage" src="img/gallery/2.png"></img></div>
-          <div class="audiotext">VÄLJ EN SÅNG FÖR ATT STARTA</div>
+          <div class="audioimage-container"><img id="audioimage" src="img/gallery/2.png"></img></div>
+          <div id="audiotext-container">VÄLJ EN SÅNG FÖR ATT STARTA</div>
+          <progress class="progress" id="seekbar" value="0" min="0" max="1"></div>
         </div>
-        <div class="col-3" style="background-color: rgba(40, 40, 40, 0.9)">
+        <div class="col-3" style="background-color: rgb(40, 40, 40)">
         </div>
         <div class="container-fluid player">
           <div class="controls">
+            <div id="time"></div>
             <div class="control-buttons">
-              <i class="material-icons">skip_previous</i>
-              <i class="material-icons">play_arrow</i>
-              <i class="material-icons">skip_next</i>
-              
-              <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="70"/>
+              <i class="material-icons" onclick="prevAudio()">skip_previous</i>
+              <i class="material-icons" onclick="playAudio()" id="playbutton">play_arrow</i>
+              <i class="material-icons" onclick="nextAudio()">skip_next</i>
+              <i class="material-icons" onclick="muteAudio()" id="mute">volume_up</i>
+              <input id="slider" class="slider" type="range" oninput="outputUpdate(this.value)" onchange="outputUpdate(this.value)" min="0" max="100" step="1" value="50">
+              <output for=slider id="volume">50</output>
             </div>
           </div>
         </div>

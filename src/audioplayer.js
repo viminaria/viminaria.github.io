@@ -1,90 +1,132 @@
-/*songens text*/
 var title = [
-["Bild 1"],
-["bIld 2"],
-["biLd 3"],
-["bilD 4"],
+["Miyazaki Ayumi - Brave Heart (tri version)"],
+["supercar - storywriter"],
+["Snail's House - fizzy resort"],
+["Snail's House - Cappucino"],
+["Nekomata Master - tori no kimochi"],
+["Nekomata Master - Far east nightbird"],
 ];
-/*definier variabler*/
-var audio = document.getElementById("myAudio"); 
-var titlecont = document.getElementById("title");
 
-/*sätter in lådor för varje i(songens text)*/
-for(i=1; i<=4; i++){
-	$("#content").append("<div id='"+i+"' class='song' onclick='selectAudio(this)'><p class='box_number'>"+title[i-1]+"</p></div>");
+for(i=1; i<=6; i++){
+	$("#audioplayer-playlist").append("<div id='"+i+"' class='playlist-item' onclick='selectAudio(this.id)'><p class='audiotext' id='audiotext" + i + "'>" + title[i-1] + "</p></div>");
 }
-/*välja vilken låt jag vill*/
+
+var audio = document.getElementById("audioelement"); 
+var titlecont = document.getElementById("audiotext-container");
+var playpause = document.getElementById("playbutton");
+var selectimg = document.getElementById("audioimage");
+
+function queueAudio(){
+	audio.src = "src/music/1.mp3";
+	titlecont.innerHTML = "<p>" + title[0] + " </p>";
+	selectimg.src = "img/audioplayer/1.jpg";
+	$('#' + 1).addClass("selectedaudio");
+}
+
 function selectAudio(nbr){
-audio.src = "sound/"+nbr.id+".mp3";
-audio.play(); 
-titlecont.innerHTML = "<p> "+title[nbr.id-1]+"/4"+" </p>";
-x=nbr.id;
+	$('.selectedaudio').removeClass("selectedaudio");
+	$('#' + nbr).addClass("selectedaudio");
+	audio.src = "src/music/" + nbr + ".mp3";
+	audio.play();
+	playpause.innerHTML = "pause";
+	titlecont.innerHTML = "<p> " + title[nbr-1] + " </p>";
+	selectimg.src = "img/audioplayer/" + nbr + ".jpg";
+	x = nbr;
 }
 
-
-/*spelar musiken*/
 function playAudio() { 
-    audio.play(); 
+	if (playpause.innerHTML == "play_arrow"){
+		audio.play();
+		playpause.innerHTML = "pause";
+	} else {
+		audio.pause();
+		playpause.innerHTML = "play_arrow";
+	}
 } 
-/*pausar musiken*/
-function pauseAudio() { 
-    audio.pause(); 
-}
 
-
-
-/*nästa och föregående låt*/
 var x = 1;
 function nextAudio(){
-
-	if (x < 4) {
+	if (x < 6) {
 		x++;
-	audio.src = "sound/"+x+".mp3";
-	audio.play(); 
-	titlecont.innerHTML = "<p> "+title[x-1]+"/4"+" </p>";
+		audio.src = "src/music/" + x + ".mp3";
+		audio.play();
+		$('.selectedaudio').removeClass("selectedaudio");
+		$('#' + x).addClass("selectedaudio");
+		playpause.innerHTML = "pause";
+		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
+		selectimg.src = "img/audioplayer/" + x + ".jpg";
 	}
-
-	else if (x = 4) {
+	else if (x = 6) {
 		x = 1;
-	audio.src = "sound/"+x+".mp3";
-	audio.play(); 
-	titlecont.innerHTML = "<p> "+title[x-1]+"/4"+" </p>";
+		audio.src = "src/music/" + x +".mp3";
+		audio.play();
+		$('.selectedaudio').removeClass("selectedaudio");
+		$('#' + x).addClass("selectedaudio");
+		playpause.innerHTML = "pause";
+		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
+		selectimg.src = "img/audioplayer/" + x + ".jpg";
 	}
 }
-
 
 function prevAudio(){
 
 	if (x > 1) {
 		x--;
-	audio.src = "sound/"+x+".mp3";
-	audio.play(); 
-	titlecont.innerHTML = "<p> "+title[x-1]+"/4"+" </p>";
+		audio.src = "src/music/"+ x +".mp3";
+		audio.play();
+		$('.selectedaudio').removeClass("selectedaudio");
+		$('#' + x).addClass("selectedaudio");
+		playpause.innerHTML = "pause";
+		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
+		selectimg.src = "img/audioplayer/" + x + ".jpg";
 	}
 
 	else if (x = 1) {
-		x = 4;
-	audio.src = "sound/"+x+".mp3";
-	audio.play(); 
-	titlecont.innerHTML = "<p> "+title[x-1]+"/4"+" </p>";
+		x = 6;
+		audio.src = "src/music/"+ x +".mp3";
+		audio.play();
+		$('.selectedaudio').removeClass("selectedaudio");
+		$('#' + x).addClass("selectedaudio");
+		playpause.innerHTML = "pause";
+		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
+		selectimg.src = "img/audioplayer/" + x + ".jpg";
 	}
 }
-/*progress bar*/
-$('#myAudio').on('timeupdate', function() {
+
+$('#audioelement').on('timeupdate', function() {
     $('#seekbar').attr("value", this.currentTime / this.duration);
     var minutes = "0" + Math.floor(this.currentTime / 60);
     var seconds = "0" + Math.floor(this.currentTime - minutes * 60);
-    var minutesdur = "0" + Math.floor(this.duration / 60);
-    var secondsdur = "0" + Math.floor(this.duration - minutes * 60);
-    document.getElementById("curtime").innerHTML = minutes + ":" + seconds + " / " + minutesdur + ":" + secondsdur;
+	var minutesdur = "0" + Math.floor(this.duration / 60);
+	var secondsdur = "0" + Math.floor(this.duration - minutesdur * 60);
+	var cur = minutes.substr(-2) + ":" + seconds.substr(-2);
+	var dur = minutesdur.substr(-2) + ":" + secondsdur.substr(-2);
+    document.getElementById("time").innerHTML = cur + "/" + dur;
 });
 
-  audio.volume = 0.8;
-
-function outputUpdate(vol) {
-
-  document.querySelector('#volume').value = vol;
-  audio.volume = vol/100;
-
+audio.volume = 0.5;
+function outputUpdate(vol){
+	document.getElementById("volume").value = vol;
+	audio.volume = vol / 100;
 }
 
+var progressBar = document.querySelector(".progress");
+progressBar.addEventListener("click", seek);
+
+function seek(e) {
+    var percent = e.offsetX / this.offsetWidth;
+    audio.currentTime = percent * audio.duration;
+    progressBar.value = percent / 100;
+}
+
+function muteAudio(){
+	if (audio.muted == true){
+		audio.muted = false;
+		document.getElementById('mute').innerHTML = "volume_up";
+	} else {
+		audio.muted = true;
+		document.getElementById('mute').innerHTML = "volume_off";
+	}
+}
+
+queueAudio();
