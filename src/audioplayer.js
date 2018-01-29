@@ -1,10 +1,10 @@
 var title = [
-["Miyazaki Ayumi - Brave Heart (tri version)"],
+["Miyazaki Ayumi - Brave Heart (tri. version)"],
 ["supercar - storywriter"],
 ["Snail's House - fizzy resort"],
 ["Snail's House - Cappucino"],
-["Nekomata Master - tori no kimochi"],
-["Nekomata Master - Far east nightbird"],
+["猫叉Master+ - tori no kimochi"],
+["猫叉Master+ - Far east nightbird"],
 ];
 
 for(i=1; i<=6; i++){
