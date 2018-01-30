@@ -125,6 +125,7 @@ $('#audioelement').on('timeupdate', function() {
 });
 
 audio.volume = 0.5;
+vol = 50;
 function outputUpdate(vol){
 	document.getElementById("volume").value = vol;
 	audio.volume = vol / 100;
@@ -148,5 +149,29 @@ function muteAudio(){
 		document.getElementById('mute').innerHTML = "volume_off";
 	}
 }
+
+document.onkeydown = function(e) {
+	switch(e.keyCode) {
+		case 32:
+		playAudio();
+		break;
+		
+		case 39:
+		nextAudio();
+		break;
+		
+		case 37:
+		prevAudio();
+		break;
+		
+		case 77:
+		muteAudio();
+		break;
+
+		case 82:
+		repeatAudio();
+		break;
+	}
+} 
 
 queueAudio();
