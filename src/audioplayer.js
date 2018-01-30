@@ -163,6 +163,16 @@ document.onkeydown = function(e) {
 		case 37:
 		prevAudio();
 		break;
+
+		case 38:
+		$("#slider").val(parseInt($("#slider").val())+5);  
+		$("#slider").trigger('change');
+		break;
+		
+		case 40:
+		$("#slider").val(parseInt($("#slider").val())-5);  
+		$("#slider").trigger('change');
+		break;
 		
 		case 77:
 		muteAudio();
