@@ -35,7 +35,7 @@ function selectAudio(nbr){
 }
 
 function playAudio() { 
-	if (playpause.innerHTML == "play_arrow"){
+	if (audio.paused){
 		audio.play();
 		playpause.innerHTML = "pause";
 	} else {
