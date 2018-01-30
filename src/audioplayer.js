@@ -44,9 +44,29 @@ function playAudio() {
 	}
 } 
 
+repeat = 0;
+function repeatAudio() {
+	if (repeat == 1) {
+		document.getElementById('repeat').style.color = "rgb(50,50,50)";
+		repeat = 0;
+	} else if (repeat == 0) {
+		document.getElementById('repeat').style.color = "#fff";
+		repeat = 1;
+	}
+}
+
 var x = 1;
 function nextAudio(){
-	if (x < 6) {
+	if (repeat == 1) {
+		audio.src = "src/music/" + x + ".mp3";
+		audio.play();
+		$('.selectedaudio').removeClass("selectedaudio");
+		$('#' + x).addClass("selectedaudio");
+		playpause.innerHTML = "pause";
+		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
+		selectimg.src = "img/audioplayer/" + x + ".jpg";
+	}
+	else if (x < 6) {
 		x++;
 		audio.src = "src/music/" + x + ".mp3";
 		audio.play();

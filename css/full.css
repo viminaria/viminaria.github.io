@@ -765,7 +765,6 @@ AUDIOPLAYER
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 50%; 
@@ -793,6 +792,10 @@ AUDIOPLAYER
   right: 210px;
 }
 
+#mute:hover, .playerbutton:hover {
+  text-shadow: white 0px 0px 1px;
+}
+
 #seekbar {
   width: 100%;
   height: 18px;
@@ -815,4 +818,13 @@ progress {
 
 progress::-webkit-progress-value { 
     background: #fff;
+}
+
+#repeat {
+  color: rgb(50,50,50);
+  position: absolute;
+  left: 160px;
+  width: 40px;
+  height: 30px;
+  line-height: 40px;
 }

@@ -40,6 +40,15 @@
       </div>
     </nav>
     <!-- content -->
+
+<!-- TO DO
+
+  - keyboard navigation
+  - hover style on controls
+  - repeat/shuffle
+
+-->
+
     <audio id="audioelement" onEnded="nextAudio(); color();"></audio>
     <div class="container-fluid" id="audioplayer-content">
       <div class="row audioplayer-row">
@@ -49,16 +58,16 @@
           <div id="audiotext-container">VÄLJ EN SÅNG FÖR ATT STARTA</div>
           <progress class="progress" id="seekbar" value="0" min="0" max="1"></div>
         </div>
-        <div class="col-3" style="background-color: rgb(40, 40, 40)">
-        </div>
+        <div class="col-3" style="background-color: rgb(40, 40, 40)"></div>
         <div class="container-fluid player">
           <div class="controls">
             <div id="time"></div>
             <div class="control-buttons">
-              <i class="material-icons" onclick="prevAudio()">skip_previous</i>
-              <i class="material-icons" onclick="playAudio()" id="playbutton">play_arrow</i>
-              <i class="material-icons" onclick="nextAudio()">skip_next</i>
-              <i class="material-icons" onclick="muteAudio()" id="mute">volume_up</i>
+              <i class="material-icons playerbutton" onclick="prevAudio()">skip_previous</i>
+              <i class="material-icons playerbutton" onclick="playAudio()" id="playbutton">play_arrow</i>
+              <i class="material-icons playerbutton" onclick="nextAudio()">skip_next</i>
+              <i class="material-icons playerbutton" onclick="muteAudio()" id="mute">volume_up</i>
+              <i class="material-icons" onclick="repeatAudio()" id="repeat">repeat_one</i>
               <input id="slider" class="slider" type="range" oninput="outputUpdate(this.value)" onchange="outputUpdate(this.value)" min="0" max="100" step="1" value="50">
               <output for=slider id="volume">50</output>
             </div>
