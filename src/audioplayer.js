@@ -130,8 +130,8 @@ $('#audioelement').on('timeupdate', function() {
     document.getElementById("time").innerHTML = cur + "/" + dur;
 });
 
-audio.volume = 0.5;
-vol = 50;
+audio.volume = 0.3;
+vol = 30;
 function outputUpdate(vol){
 	document.getElementById("volume").value = vol;
 	audio.volume = vol / 100;
