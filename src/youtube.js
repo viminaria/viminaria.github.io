@@ -14,7 +14,7 @@ function onYouTubeIframeAPIReady() {
             enablejsapi: 1,
             modestbranding: 1,
             playlist: '-guAClQdOq4',
-            vq: 'hd1080'
+            suggestedQuality: 'hd1080'
         },
         allowfullscreen: 1,
         events: {
@@ -34,7 +34,7 @@ function onYouTubeIframeAPIReady() {
             enablejsapi: 1,
             modestbranding: 1,
             playlist: 'GDYcEAQwqBQ',
-            vq: 'hd1080'
+            suggestedQuality: 'hd1080'
         },
         allowfullscreen: 1,
         events: {
