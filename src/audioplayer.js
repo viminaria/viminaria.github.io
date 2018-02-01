@@ -57,16 +57,7 @@ function repeatAudio() {
 
 var x = 1;
 function nextAudio(){
-	if (repeat == 1) {
-		audio.src = "src/music/" + x + ".mp3";
-		audio.play();
-		$('.selectedaudio').removeClass("selectedaudio");
-		$('#' + x).addClass("selectedaudio");
-		playpause.innerHTML = "pause";
-		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
-		selectimg.src = "img/audioplayer/" + x + ".jpg";
-	}
-	else if (x < 6) {
+	if (x < 6) {
 		x++;
 		audio.src = "src/music/" + x + ".mp3";
 		audio.play();
@@ -110,6 +101,21 @@ function prevAudio(){
 		playpause.innerHTML = "pause";
 		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
 		selectimg.src = "img/audioplayer/" + x + ".jpg";
+	}
+}
+
+function playnextAudio(){
+	if (repeat == 1){
+		audio.src = "src/music/" + x + ".mp3";
+		audio.play();
+		$('.selectedaudio').removeClass("selectedaudio");
+		$('#' + x).addClass("selectedaudio");
+		playpause.innerHTML = "pause";
+		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
+		selectimg.src = "img/audioplayer/" + x + ".jpg";
+	}
+	else {
+		nextAudio();
 	}
 }
 
