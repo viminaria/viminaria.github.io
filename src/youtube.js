@@ -21,7 +21,6 @@ function onYouTubeIframeAPIReady() {
             'onStateChange': onPlayerStateChange
         }
     });
-
     player2 = new YT.Player('ytplayer2', {
         videoId: 'GDYcEAQwqBQ',
         playerVars: {
