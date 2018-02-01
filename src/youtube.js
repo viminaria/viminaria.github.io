@@ -23,7 +23,7 @@ function onYouTubeIframeAPIReady() {
     });
 
     player2 = new YT.Player('ytplayer2', {
-        videoId: 'eNF7jo9P_EQ',
+        videoId: 'GDYcEAQwqBQ',
         playerVars: {
             mute: 1,
             autoplay: 1,
@@ -33,7 +33,7 @@ function onYouTubeIframeAPIReady() {
             autohide: 0,
             enablejsapi: 1,
             modestbranding: 1,
-            playlist: 'eNF7jo9P_EQ',
+            playlist: 'GDYcEAQwqBQ',
             vq: 'hd1080'
         },
         allowfullscreen: 1,
