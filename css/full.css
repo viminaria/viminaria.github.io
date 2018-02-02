@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-
 .materials-icons {
   font-family: MaterialDesign;
 }
@@ -12,6 +11,9 @@ body {
   -o-background-size: cover;
   font-family: 'Ubuntu';
   background-color: #323232;
+  background-image: url(../img/bg.jpg);
+  background-repeat: repeat;
+  background-size: 100px;
   overflow-x: hidden;
 }
 
