@@ -99,7 +99,7 @@ function nextAudio() {
 
 function prevAudio() {
 	if (shuffle == 1) {
-		x = Math.floor(Math.random() * 6) + 1;
+		x = Math.ceil(Math.random() * 6);
 		mainAudio();
 	}
 	else if (x > 1) {
@@ -193,6 +193,10 @@ document.onkeydown = function(e) {
 
 		case 82:
 		repeatAudio();
+		break;
+
+		case 83:
+		shuffleAudio();
 		break;
 	}
 } 
