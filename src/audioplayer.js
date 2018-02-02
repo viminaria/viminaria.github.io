@@ -7,7 +7,7 @@ var title = [
 ["猫叉Master+ - Far east nightbird"],
 ];
 
-for(i=1; i<=6; i++){
+for(i=1; i<=6; i++) {
 	$("#audioplayer-playlist").append("<div id='"+i+"' class='playlist-item' onclick='selectAudio(this.id)'><p class='audiotext' id='audiotext" + i + "'>" + title[i-1] + "</p></div>");
 }
 
@@ -16,14 +16,14 @@ var titlecont = document.getElementById("audiotext-container");
 var playpause = document.getElementById("playbutton");
 var selectimg = document.getElementById("audioimage");
 
-function queueAudio(){
+function queueAudio() {
 	audio.src = "src/music/1.mp3";
 	titlecont.innerHTML = "<p>" + title[0] + " </p>";
 	selectimg.src = "img/audioplayer/1.jpg";
 	$('#' + 1).addClass("selectedaudio");
 }
 
-function selectAudio(nbr){
+function selectAudio(nbr) {
 	$('.selectedaudio').removeClass("selectedaudio");
 	$('#' + nbr).addClass("selectedaudio");
 	audio.src = "src/music/" + nbr + ".mp3";
@@ -35,7 +35,7 @@ function selectAudio(nbr){
 }
 
 function playAudio() { 
-	if (audio.paused){
+	if (audio.paused) {
 		audio.play();
 		playpause.innerHTML = "pause";
 	} else {
@@ -46,6 +46,7 @@ function playAudio() {
 
 repeat = 0;
 shuffle = 0;
+
 function repeatAudio() {
 	if (repeat == 1) {
 		document.getElementById('repeat').style.color = "rgb(50,50,50)";
@@ -57,6 +58,7 @@ function repeatAudio() {
 		shuffle = 0;
 	}
 }
+
 function shuffleAudio() {
 	if (shuffle == 1) {
 		document.getElementById('shuffle').style.color = "rgb(50,50,50)";
@@ -69,94 +71,55 @@ function shuffleAudio() {
 	}
 }
 
+function mainAudio() {
+	audio.src = "src/music/" + x + ".mp3";
+	audio.play();
+	$('.selectedaudio').removeClass("selectedaudio");
+	$('#' + x).addClass("selectedaudio");
+	playpause.innerHTML = "pause";
+	titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
+	selectimg.src = "img/audioplayer/" + x + ".jpg";
+}
 
 var x = 1;
-function nextAudio(){
+function nextAudio() {
 	if (shuffle == 1) {
-		x = Math.floor(Math.random() * 6) + 1;
-		audio.src = "src/music/" + x + ".mp3";
-		audio.play();
-		$('.selectedaudio').removeClass("selectedaudio");
-		$('#' + x).addClass("selectedaudio");
-		playpause.innerHTML = "pause";
-		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
-		selectimg.src = "img/audioplayer/" + x + ".jpg";
+		x = Math.ceil(Math.random() * 6);
+		mainAudio();
 	}
 	else if (x < 6) {
 		x++;
-		audio.src = "src/music/" + x + ".mp3";
-		audio.play();
-		$('.selectedaudio').removeClass("selectedaudio");
-		$('#' + x).addClass("selectedaudio");
-		playpause.innerHTML = "pause";
-		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
-		selectimg.src = "img/audioplayer/" + x + ".jpg";
+		mainAudio();
 	}
 	else if (x = 6) {
 		x = 1;
-		audio.src = "src/music/" + x +".mp3";
-		audio.play();
-		$('.selectedaudio').removeClass("selectedaudio");
-		$('#' + x).addClass("selectedaudio");
-		playpause.innerHTML = "pause";
-		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
-		selectimg.src = "img/audioplayer/" + x + ".jpg";
+		mainAudio();
 	}
 }
 
-function prevAudio(){
+function prevAudio() {
 	if (shuffle == 1) {
 		x = Math.floor(Math.random() * 6) + 1;
-		audio.src = "src/music/" + x + ".mp3";
-		audio.play();
-		$('.selectedaudio').removeClass("selectedaudio");
-		$('#' + x).addClass("selectedaudio");
-		playpause.innerHTML = "pause";
-		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
-		selectimg.src = "img/audioplayer/" + x + ".jpg";
+		mainAudio();
 	}
 	else if (x > 1) {
 		x--;
-		audio.src = "src/music/"+ x +".mp3";
-		audio.play();
-		$('.selectedaudio').removeClass("selectedaudio");
-		$('#' + x).addClass("selectedaudio");
-		playpause.innerHTML = "pause";
-		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
-		selectimg.src = "img/audioplayer/" + x + ".jpg";
+		mainAudio();
 	}
 
 	else if (x = 1) {
 		x = 6;
-		audio.src = "src/music/"+ x +".mp3";
-		audio.play();
-		$('.selectedaudio').removeClass("selectedaudio");
-		$('#' + x).addClass("selectedaudio");
-		playpause.innerHTML = "pause";
-		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
-		selectimg.src = "img/audioplayer/" + x + ".jpg";
+		mainAudio();
 	}
 }
 
-function playnextAudio(){
-	if (repeat == 1){
-		audio.src = "src/music/" + x + ".mp3";
-		audio.play();
-		$('.selectedaudio').removeClass("selectedaudio");
-		$('#' + x).addClass("selectedaudio");
-		playpause.innerHTML = "pause";
-		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
-		selectimg.src = "img/audioplayer/" + x + ".jpg";
+function playnextAudio() {
+	if (repeat == 1) {
+		mainAudio();
 	}
-	else if (shuffle == 1){
+	else if (shuffle == 1) {
 		x = Math.floor(Math.random() * 6) + 1;
-		audio.src = "src/music/" + x + ".mp3";
-		audio.play();
-		$('.selectedaudio').removeClass("selectedaudio");
-		$('#' + x).addClass("selectedaudio");
-		playpause.innerHTML = "pause";
-		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
-		selectimg.src = "img/audioplayer/" + x + ".jpg";
+		mainAudio();
 	}
 	else {
 		nextAudio();
@@ -176,7 +139,7 @@ $('#audioelement').on('timeupdate', function() {
 
 audio.volume = 0.3;
 vol = 30;
-function outputUpdate(vol){
+function outputUpdate(vol) {
 	document.getElementById("volume").value = vol;
 	audio.volume = vol / 100;
 }
@@ -190,8 +153,8 @@ function seek(e) {
     progressBar.value = percent / 100;
 }
 
-function muteAudio(){
-	if (audio.muted == true){
+function muteAudio() {
+	if (audio.muted == true) {
 		audio.muted = false;
 		document.getElementById('mute').innerHTML = "volume_up";
 	} else {
@@ -215,12 +178,12 @@ document.onkeydown = function(e) {
 		break;
 
 		case 38:
-		$("#slider").val(parseInt($("#slider").val())+5);  
+		$("#slider").val(parseInt($("#slider").val())+1);  
 		$("#slider").trigger('change');
 		break;
 		
 		case 40:
-		$("#slider").val(parseInt($("#slider").val())-5);  
+		$("#slider").val(parseInt($("#slider").val())-1);  
 		$("#slider").trigger('change');
 		break;
 		
