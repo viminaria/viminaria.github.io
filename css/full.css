@@ -421,7 +421,7 @@ FORMATTING FOR QUIZ
   padding: 2%;
 }
 
-#cardtext {
+.cardtext {
   padding: 1% 5%;
   margin: 0px;
 }
@@ -500,7 +500,7 @@ background-size: cover;
     padding: 15px;
   }
   
-  #portwhitetext {
+  .portwhitetext {
     color: #fff;
     font-size: 1.1rem;
     padding: 10px;
@@ -534,7 +534,7 @@ background-size: cover;
     padding: 15px;
   }
   
-  #portwhitetext {
+  .portwhitetext {
     color: #fff;
     font-size: 1rem;
     padding: 10px;
@@ -567,7 +567,7 @@ background-size: cover;
     padding: 15px;
   }
   
-  #portwhitetext {
+  .portwhitetext {
     color: #fff;
     font-size: 1rem;
     padding: 10px;
@@ -600,7 +600,7 @@ background-size: cover;
     padding: 15px;
   }
   
-  #portwhitetext {
+  .portwhitetext {
     color: #fff;
     font-size: 0.9rem;
     padding: 10px;
