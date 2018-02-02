@@ -51,24 +51,24 @@ shuffle = 0;
 
 function repeatAudio() {
 	if (repeat == 1) {
-		document.getElementById('repeat').style.color = "rgb(50,50,50)";
+		document.getElementById('repeat').style.color = "#444444";
 		repeat = 0;
 	} else if (repeat == 0) {
 		document.getElementById('repeat').style.color = "#fff";
 		repeat = 1;
-		document.getElementById('shuffle').style.color = "rgb(50,50,50)";
+		document.getElementById('shuffle').style.color = "#444444";
 		shuffle = 0;
 	}
 }
 
 function shuffleAudio() {
 	if (shuffle == 1) {
-		document.getElementById('shuffle').style.color = "rgb(50,50,50)";
+		document.getElementById('shuffle').style.color = "#444444";
 		shuffle = 0;
 	} else if (shuffle == 0) {
 		document.getElementById('shuffle').style.color = "#fff";
 		shuffle = 1;
-		document.getElementById('repeat').style.color = "rgb(50,50,50)";
+		document.getElementById('repeat').style.color = "#444444";
 		repeat = 0;
 	}
 }

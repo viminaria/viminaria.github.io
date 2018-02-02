@@ -803,8 +803,8 @@ AUDIOPLAYER
   right: 210px;
 }
 
-#mute:hover, .playerbutton:hover {
-  text-shadow: white 0px 0px 1px;
+#mute:hover, .playerbutton:hover{
+  text-shadow: white 0px 0px 3px;
 }
 
 #seekbar {
@@ -832,7 +832,7 @@ progress::-webkit-progress-value {
 }
 
 #repeat {
-  color: rgb(50,50,50);
+  color: #444444;
   position: absolute;
   left: 160px;
   width: 40px;
@@ -841,10 +841,14 @@ progress::-webkit-progress-value {
 }
 
 #shuffle {
-  color: rgb(50,50,50);
+  color: #444444;
   position: absolute;
   left: 200px;
   width: 40px;
   height: 30px;
   line-height: 40px;
+}
+
+#repeat:hover, #shuffle:hover{
+  text-shadow:  #444444 0px 0px 3px;
 }
