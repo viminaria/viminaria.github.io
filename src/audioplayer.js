@@ -45,6 +45,7 @@ function playAudio() {
 } 
 
 repeat = 0;
+shuffle = 0;
 function repeatAudio() {
 	if (repeat == 1) {
 		document.getElementById('repeat').style.color = "rgb(50,50,50)";
@@ -52,12 +53,36 @@ function repeatAudio() {
 	} else if (repeat == 0) {
 		document.getElementById('repeat').style.color = "#fff";
 		repeat = 1;
+		document.getElementById('shuffle').style.color = "rgb(50,50,50)";
+		shuffle = 0;
+	}
+}
+function shuffleAudio() {
+	if (shuffle == 1) {
+		document.getElementById('shuffle').style.color = "rgb(50,50,50)";
+		shuffle = 0;
+	} else if (shuffle == 0) {
+		document.getElementById('shuffle').style.color = "#fff";
+		shuffle = 1;
+		document.getElementById('repeat').style.color = "rgb(50,50,50)";
+		repeat = 0;
 	}
 }
 
+
 var x = 1;
 function nextAudio(){
-	if (x < 6) {
+	if (shuffle == 1) {
+		x = Math.floor(Math.random() * 6) + 1;
+		audio.src = "src/music/" + x + ".mp3";
+		audio.play();
+		$('.selectedaudio').removeClass("selectedaudio");
+		$('#' + x).addClass("selectedaudio");
+		playpause.innerHTML = "pause";
+		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
+		selectimg.src = "img/audioplayer/" + x + ".jpg";
+	}
+	else if (x < 6) {
 		x++;
 		audio.src = "src/music/" + x + ".mp3";
 		audio.play();
@@ -80,8 +105,17 @@ function nextAudio(){
 }
 
 function prevAudio(){
-
-	if (x > 1) {
+	if (shuffle == 1) {
+		x = Math.floor(Math.random() * 6) + 1;
+		audio.src = "src/music/" + x + ".mp3";
+		audio.play();
+		$('.selectedaudio').removeClass("selectedaudio");
+		$('#' + x).addClass("selectedaudio");
+		playpause.innerHTML = "pause";
+		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
+		selectimg.src = "img/audioplayer/" + x + ".jpg";
+	}
+	else if (x > 1) {
 		x--;
 		audio.src = "src/music/"+ x +".mp3";
 		audio.play();
@@ -106,6 +140,16 @@ function prevAudio(){
 
 function playnextAudio(){
 	if (repeat == 1){
+		audio.src = "src/music/" + x + ".mp3";
+		audio.play();
+		$('.selectedaudio').removeClass("selectedaudio");
+		$('#' + x).addClass("selectedaudio");
+		playpause.innerHTML = "pause";
+		titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
+		selectimg.src = "img/audioplayer/" + x + ".jpg";
+	}
+	else if (shuffle == 1){
+		x = Math.floor(Math.random() * 6) + 1;
 		audio.src = "src/music/" + x + ".mp3";
 		audio.play();
 		$('.selectedaudio').removeClass("selectedaudio");
