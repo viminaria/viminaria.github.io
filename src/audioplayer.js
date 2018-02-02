@@ -7,7 +7,9 @@ var title = [
 ["猫叉Master+ - Far east nightbird"],
 ];
 
-for(i=1; i<=6; i++) {
+var songtotal = 6;
+
+for(i=1; i<=songtotal; i++) {
 	$("#audioplayer-playlist").append("<div id='"+i+"' class='playlist-item' onclick='selectAudio(this.id)'><p class='audiotext' id='audiotext" + i + "'>" + title[i-1] + "</p></div>");
 }
 
@@ -84,14 +86,14 @@ function mainAudio() {
 var x = 1;
 function nextAudio() {
 	if (shuffle == 1) {
-		x = Math.ceil(Math.random() * 6);
+		x = Math.ceil(Math.random() * songtotal);
 		mainAudio();
 	}
-	else if (x < 6) {
+	else if (x < songtotal) {
 		x++;
 		mainAudio();
 	}
-	else if (x = 6) {
+	else if (x = songtotal) {
 		x = 1;
 		mainAudio();
 	}
@@ -99,7 +101,7 @@ function nextAudio() {
 
 function prevAudio() {
 	if (shuffle == 1) {
-		x = Math.ceil(Math.random() * 6);
+		x = Math.ceil(Math.random() * songtotal);
 		mainAudio();
 	}
 	else if (x > 1) {
@@ -108,7 +110,7 @@ function prevAudio() {
 	}
 
 	else if (x = 1) {
-		x = 6;
+		x = songtotal;
 		mainAudio();
 	}
 }
@@ -118,7 +120,7 @@ function playnextAudio() {
 		mainAudio();
 	}
 	else if (shuffle == 1) {
-		x = Math.floor(Math.random() * 6) + 1;
+		x = Math.ceil(Math.random() * songtotal);
 		mainAudio();
 	}
 	else {
