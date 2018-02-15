@@ -95,6 +95,7 @@ h3 {
   background-color: rgba(25, 25, 25, 0.9);
   text-align: center;
   user-select: none;
+  z-index: 100;
 }
 
 .calendarcontent {
@@ -476,6 +477,18 @@ background-size: cover;
   }
 }
 
+.centered {
+  text-align: center;
+}
+
+.portheader {
+  margin-bottom: 20px;
+}
+
+.portwhitetext {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .parallax-window, .parallax-window-secondary, .parallax-window-bottom {
   background: transparent;
@@ -498,17 +511,15 @@ background-size: cover;
   }
 
   .portheader {
-    left:10%;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     color: #fff;
     padding: 15px;
   }
-  
+
   .portwhitetext {
     color: #fff;
     font-size: 1.1rem;
     padding: 10px;
-    margin: auto;
   }
 }
 
@@ -532,15 +543,14 @@ background-size: cover;
   }
 
   .portheader {
-    left:10%;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     color: #fff;
     padding: 15px;
   }
   
   .portwhitetext {
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.05rem;
     padding: 10px;
   }
 }
@@ -565,15 +575,14 @@ background-size: cover;
   }
 
   .portheader {
-    left:10%;
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     color: #fff;
     padding: 15px;
   }
   
   .portwhitetext {
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 10px;
   }
 }
@@ -598,15 +607,14 @@ background-size: cover;
   }
 
   .portheader {
-    left:10%;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: #fff;
     padding: 15px;
   }
   
   .portwhitetext {
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 10px;
   }
 }
