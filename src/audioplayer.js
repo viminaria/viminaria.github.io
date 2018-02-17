@@ -1,13 +1,21 @@
 var title = [
-["Miyazaki Ayumi - Brave Heart (tri. version)"],
-["supercar - storywriter"],
-["Snail's House - fizzy resort"],
+["Ujico* - Memories"],
+["Ujico* - Lost Memory"],
+["Ujico* - Summer Nostalgia"],
 ["Snail's House - Cappucino"],
-["猫叉Master+ - tori no kimochi"],
-["猫叉Master+ - Far east nightbird"],
+["Snail's House - fizzy resort"],
+["Snail's House - Balloons"],
+["Ujico* - 零番街"],
+["Ujico* - Night Street Reflection"],
+["Ujico* - Junction"],
+["Ujico* - RadioCity"],
+["Ujico* - Construction"],
+["Ujico* - System III"],
+["Ujico* - Snow Captivation"],
+["Ujico* - Re;sonance"],
 ];
 
-var songtotal = 6;
+var songtotal = 14;
 
 for(i=1; i<=songtotal; i++) {
 	$("#audioplayer-playlist").append("<div id='"+i+"' class='playlist-item' onclick='selectAudio(this.id)'><p class='audiotext' id='audiotext" + i + "'>" + title[i-1] + "</p></div>");
