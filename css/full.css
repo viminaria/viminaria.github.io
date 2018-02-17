@@ -740,13 +740,6 @@ AUDIOPLAYER
   margin: auto;
   background-color: black;
   width: 100%;
-  position: absolute;
-}
-
-.audioimage-container {
-  margin: auto;
-  background-color: black;
-  padding-bottom: 30%;
 }
 
 .playlist-item {
@@ -864,7 +857,39 @@ progress::-webkit-progress-value {
 /* Donate */
 
 .donateheader {
-  font-size: 5em;
-  position: relative;
-  top: 40px;
+  font-size: 4em;
+  margin: 5%;
+}
+
+.coinheader {
+  font-size: 2em;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+.thankyou {
+  font-size: 1.5em;
+  color: #fff;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.donatecontainer {
+  margin: auto;
+  width: 70%;
+  user-select: none;
+}
+
+code {
+  text-align: center;
+  margin: auto;
+  display: block;
+  background-color: #1f1f1f;
+  padding: 2px;
+  user-select: text;
+  font-size: 1.5em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
