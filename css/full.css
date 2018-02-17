@@ -49,6 +49,23 @@ body::-webkit-scrollbar{
   max-width: 95%;
 }
 
+.footercontainer {
+  width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #a8a8a8;
+}
+
+.donatelink {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.donatelink:hover {
+  color: #fff;
+}
+
 h1 {
   color: #fff;
   margin:auto;
