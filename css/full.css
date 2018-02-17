@@ -860,3 +860,11 @@ progress::-webkit-progress-value {
 #repeat:hover, #shuffle:hover{
   text-shadow:  #444444 0px 0px 3px;
 }
+
+/* Donate */
+
+.donateheader {
+  font-size: 5em;
+  position: relative;
+  top: 40px;
+}
