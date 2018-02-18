@@ -11,7 +11,10 @@
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
-            
+
+    <!-- scrolling -->
+    <link rel="stylesheet" href="css/aos.css">
+    
     <!-- pace page loader -->
     <link href="css/pace.css" rel="stylesheet">
     <script src="src/pace.min.js"></script>
@@ -53,8 +56,8 @@
     <audio id="audioelement" onEnded="playnextAudio(); color();"></audio>
     <div class="container-fluid" id="audioplayer-content">
       <div class="row audioplayer-row">
-        <div class="col-3 fadein" id="audioplayer-playlist"></div>
-        <div class="col-6 fadein" id="audioplayer-nav">
+        <div class="col-3" data-aos="fade" id="audioplayer-playlist"></div>
+        <div class="col-6" data-aos="fade" id="audioplayer-nav">
           <div class="audioimage-container" onclick="playAudio()"><img id="audioimage" alt="audioimage"></div>
           <div id="audiotext-container">song could not be selected</div>
           <progress class="progress" id="seekbar" value="0" max="1"></progress>
@@ -88,5 +91,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
     <script src="src/audioplayer.js"></script>
+    <script src="src/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

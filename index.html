@@ -19,6 +19,9 @@
     <!-- particles css -->
     <link rel="stylesheet" media="screen" href="css/particles.css">
 
+    <!-- scrolling -->
+    <link rel="stylesheet" href="css/aos.css">
+
     <!-- Custom styles for this template -->
     <link href="css/full.css" rel="stylesheet">
   </head>
@@ -50,7 +53,7 @@
       </div>
     </nav>
     <div id="particles-js"></div>
-    <div class="poebody fadein">
+    <div class="poebody" data-aos="fade">
       <div class="container-fluid main">
         <!-- content -->
         <h2 class="centerheader">useful path of exile resources</h2>
@@ -166,5 +169,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
     <script src="src/particles.js"></script>
     <script src="src/app.js"></script>
+    <script src="src/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

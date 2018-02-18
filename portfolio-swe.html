@@ -11,7 +11,10 @@
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
-            
+
+    <!-- scrolling -->
+    <link rel="stylesheet" href="css/aos.css">
+    
     <!-- pace page loader -->
     <link href="css/pace.css" rel="stylesheet">
     <script src="src/pace.min.js"></script>
@@ -52,17 +55,17 @@
     </nav>
 
     <!-- content -->
-    <div class="fadein">
+    <div>
       <div class="parallax-window" data-parallax="scroll" data-image-src="img/portfolio/1.jpg"></div>
         <div class="portcontent">
-          <h2 class="portheader centered">introduktion</h2>
+          <h2 class="portheader centered" data-aos="fade" data-aos-duration="1500">introduktion</h2>
           <div class="row">
             <div class="col-md-7 col-lg-9">
-              <p class="portwhitetext"> Här kommer text om vem jag är och vad jag gör.
+              <p class="portwhitetext" data-aos="fade" data-aos-duration="1500"> Här kommer text om vem jag är och vad jag gör.
               </p>
             </div>
           <div class="col-md-5 col-lg-3">
-            <div class="card">
+            <div class="card" data-aos="fade" data-aos-duration="1500">
               <div class="card-body">
                 <img class="cardimg" src="img/gallery/1.png" alt="cardimg"><br/>
                 <p class="cardtext">Jesper Timonen <br />
@@ -87,20 +90,22 @@
         </div>
 
         <div class="portcontent">
-            <h2 class="portheader centered">projekt</h2><br />
+            <h2 class="portheader centered" data-aos="fade" data-aos-duration="1500">projekt</h2><br />
             <div class="row">
               <div class="col-md-6 col-lg-5">
-                <a href="audioplayer.html" target="_blank"><img src="img/portfolio/audioplayer.jpg" id="portimage"></a>
+                <a href="audioplayer.html" target="_blank"><img src="img/portfolio/audioplayer.jpg" id="portimage" data-aos="fade" data-aos-duration="1500"></a>
               </div>
               <div class="col-md-6 col-lg-7">
   
-                <p class="portwhitetext"> Här ser du några av mina projekt.
+                <p class="portwhitetext" data-aos="fade" data-aos-duration="1500"> Här ser du några av mina projekt.
                 </p>
-                <p class="portwhitetext"> Pröva på min <a href="audioplayer.html" target="_blank">ljudspelare</a>!
+                <p class="portwhitetext" data-aos="fade" data-aos-duration="1500"> Pröva på min <a href="audioplayer.html" target="_blank">ljudspelare</a>!
                 </p>
               </div>
             </div>
-          </div>      <div class="parallax-window-secondary">
+          </div>
+ 
+      <div class="parallax-window-secondary">
         <div class="parallax-slider">
             <div id="video-overlay2" style="background-image:url(src/yt/overlay2.jpg);"></div>
             <div class="background-video">
@@ -113,9 +118,9 @@
       <div class="portcontent">
           <div class="row">
             <div class="col">
-              <h2 class="portheader centered">hur får du tag på mig?</h2>
-              <p class="portwhitetext centered"><a href="https://www.youtube.com/user/Viminaria" target="_blank">youtube</a></p>
-              <p class="portwhitetext centered">e-post: viminaria@gmail.com</p>
+              <h2 class="portheader centered" data-aos="fade" data-aos-duration="1500">hur får du tag på mig?</h2>
+              <p class="portwhitetext centered" data-aos="fade" data-aos-duration="1500"><a href="https://www.youtube.com/user/Viminaria" target="_blank">youtube</a></p>
+              <p class="portwhitetext centered" data-aos="fade" data-aos-duration="1500">e-post: viminaria@gmail.com</p>
             </div>
           </div>
         </div>
@@ -134,5 +139,9 @@
     <script src="src/parallax.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="src/youtube.js"></script>
+    <script src="src/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -15,6 +15,9 @@
     <!-- pace page loader -->
     <link href="css/pace.css" rel="stylesheet">
     <script src="src/pace.min.js"></script>
+    
+    <!-- scrolling -->
+    <link rel="stylesheet" href="css/aos.css">
 
     <!-- particles css -->
     <link rel="stylesheet" media="screen" href="css/particles.css">
@@ -56,7 +59,7 @@
     <!-- content -->    
     <div id="particles-js"></div>
     
-    <div class="content donatecontainer fadein">
+    <div class="content donatecontainer" data-aos="fade">
       <h2 class="centered donateheader">donate</h2>
       
       <div class="coinheader">TurtleCoin (TRTL)</div>
@@ -78,5 +81,9 @@
     <!-- particles -->
     <script src="src/particles.js"></script>
     <script src="src/app.js"></script>
+    <script src="src/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

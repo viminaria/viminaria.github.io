@@ -11,7 +11,10 @@
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
-            
+
+    <!-- scrolling -->
+    <link rel="stylesheet" href="css/aos.css">
+    
     <!-- pace page loader -->
     <link href="css/pace.css" rel="stylesheet">
     <script src="src/pace.min.js"></script>
@@ -52,17 +55,17 @@
     </nav>
 
     <!-- content -->
-    <div class="fadein">
+    <div>
       <div class="parallax-window" data-parallax="scroll" data-image-src="img/portfolio/1.jpg"></div>
         <div class="portcontent">
-          <h2 class="portheader centered">introduktio</h2>
+          <h2 class="portheader centered" data-aos="fade" data-aos-duration="1500">introduktio</h2>
           <div class="row">
             <div class="col-md-7 col-lg-9">
-              <p class="portwhitetext"> Tähän tulee pieni introduktio, kuka olen, ja mitä teen yms.
+              <p class="portwhitetext" data-aos="fade" data-aos-duration="1500"> Tähän tulee pieni introduktio, kuka olen, ja mitä teen yms.
               </p>
             </div>
           <div class="col-md-5 col-lg-3">
-            <div class="card">
+            <div class="card" data-aos="fade" data-aos-duration="1500">
               <div class="card-body">
                 <img class="cardimg" src="img/gallery/1.png" alt="cardimg"><br/>
                 <p class="cardtext">Jesper Timonen <br />
@@ -87,16 +90,16 @@
         </div>
 
       <div class="portcontent">
-          <h2 class="portheader centered">projektit</h2><br />
+          <h2 class="portheader centered" data-aos="fade" data-aos-duration="1500">projektit</h2><br />
           <div class="row">
             <div class="col-md-6 col-lg-5">
-              <a href="audioplayer.html" target="_blank"><img src="img/portfolio/audioplayer.jpg" id="portimage"></a>
+              <a href="audioplayer.html" target="_blank"><img src="img/portfolio/audioplayer.jpg" id="portimage" data-aos="fade" data-aos-duration="1500"></a>
             </div>
             <div class="col-md-6 col-lg-7">
 
-              <p class="portwhitetext"> Täältä näette joitain projekteistani.
+              <p class="portwhitetext" data-aos="fade" data-aos-duration="1500"> Täältä näette joitain projekteistani.
               </p>
-              <p class="portwhitetext"> Kokeile minun <a href="audioplayer.html" target="_blank">audiosoitintani</a>!
+              <p class="portwhitetext" data-aos="fade" data-aos-duration="1500"> Kokeile minun <a href="audioplayer.html" target="_blank">audiosoitintani</a>!
               </p>
             </div>
           </div>
@@ -114,9 +117,9 @@
       <div class="portcontent">
           <div class="row">
             <div class="col">
-              <h2 class="portheader centered">miten minuun saa yhteyttä?</h2>
-              <p class="portwhitetext centered"><a href="https://www.youtube.com/user/Viminaria" target="_blank">youtube</a></p>
-              <p class="portwhitetext centered">sähköposti: viminaria@gmail.com</p>
+              <h2 class="portheader centered" data-aos="fade" data-aos-duration="1500">miten minuun saa yhteyttä?</h2>
+              <p class="portwhitetext centered" data-aos="fade" data-aos-duration="1500"><a href="https://www.youtube.com/user/Viminaria" target="_blank">youtube</a></p>
+              <p class="portwhitetext centered" data-aos="fade" data-aos-duration="1500">sähköposti: viminaria@gmail.com</p>
             </div>
           </div>
         </div>
@@ -135,5 +138,9 @@
     <script src="src/parallax.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="src/youtube.js"></script>
+    <script src="src/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
