@@ -67,12 +67,12 @@
           <div class="controls">
             <div id="time"></div>
             <div class="control-buttons">
-              <i class="material-icons playerbutton" onclick="prevAudio()">skip_previous</i>
-              <i class="material-icons playerbutton" onclick="playAudio()" id="playbutton">play_arrow</i>
-              <i class="material-icons playerbutton" onclick="nextAudio()">skip_next</i>
-              <i class="material-icons playerbutton" onclick="muteAudio()" id="mute">volume_up</i>
-              <i class="material-icons" onclick="repeatAudio()" id="repeat">repeat_one</i>
-              <i class="material-icons" onclick="shuffleAudio()" id="shuffle">shuffle</i>
+              <i class="material-icons playerbutton" onclick="prevAudio()" data-toggle="tooltip" title="previous">skip_previous</i>
+              <i class="material-icons playerbutton" onclick="playAudio()" id="playbutton" data-toggle="tooltip" title="play/pause">play_arrow</i>
+              <i class="material-icons playerbutton" onclick="nextAudio()" data-toggle="tooltip" title="next">skip_next</i>
+              <i class="material-icons playerbutton" onclick="muteAudio()" id="mute" data-toggle="tooltip" title="mute/unmute">volume_up</i>
+              <i class="material-icons" onclick="repeatAudio()" id="repeat" data-toggle="tooltip" title="repeat song">repeat_one</i>
+              <i class="material-icons" onclick="shuffleAudio()" id="shuffle" data-toggle="tooltip" title="shuffle">shuffle</i>
               <input id="slider" class="slider" type="range" oninput="outputUpdate(this.value)" onchange="outputUpdate(this.value)" min="0" max="100" step="1" value="30">
               <output for=slider id="volume">30</output>
             </div>
@@ -91,6 +91,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
     <script src="src/audioplayer.js"></script>
+    <script>
+      $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip(); 
+      });
+    </script>
     <script src="src/aos.js"></script>
     <script>
       AOS.init();
