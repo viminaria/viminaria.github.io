@@ -24,6 +24,7 @@ for(i=1; i<=songtotal; i++) {
 var audio = document.getElementById("audioelement"); 
 var titlecont = document.getElementById("audiotext-container");
 var playpause = document.getElementById("playbutton");
+var muteunmute = document.getElementById('mute');
 var selectimg = document.getElementById("audioimage");
 
 function queueAudio() {
@@ -48,9 +49,11 @@ function playAudio() {
 	if (audio.paused) {
 		audio.play();
 		playpause.innerHTML = "pause";
+		playpause.title = "pause"
 	} else {
 		audio.pause();
 		playpause.innerHTML = "play_arrow";
+		playpause.title = "play"
 	}
 } 
 
@@ -166,10 +169,12 @@ function seek(e) {
 function muteAudio() {
 	if (audio.muted == true) {
 		audio.muted = false;
-		document.getElementById('mute').innerHTML = "volume_up";
+		muteunmute.innerHTML = "volume_up";
+		muteunmute.title = "mute";
 	} else {
 		audio.muted = true;
-		document.getElementById('mute').innerHTML = "volume_off";
+		muteunmute.innerHTML = "volume_off";
+		muteunmute.title = "unmute";
 	}
 }
 
