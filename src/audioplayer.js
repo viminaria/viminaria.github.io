@@ -49,11 +49,9 @@ function playAudio() {
 	if (audio.paused) {
 		audio.play();
 		playpause.innerHTML = "pause";
-		playpause.title = "pause"
 	} else {
 		audio.pause();
 		playpause.innerHTML = "play_arrow";
-		playpause.title = "play"
 	}
 } 
 
@@ -170,11 +168,9 @@ function muteAudio() {
 	if (audio.muted == true) {
 		audio.muted = false;
 		muteunmute.innerHTML = "volume_up";
-		muteunmute.title = "mute";
 	} else {
 		audio.muted = true;
 		muteunmute.innerHTML = "volume_off";
-		muteunmute.title = "unmute";
 	}
 }
 
