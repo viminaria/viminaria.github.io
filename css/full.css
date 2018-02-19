@@ -321,8 +321,9 @@ FORMATTING FOR QUIZ
 
 .square:hover {
   color:#fff;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-  background-blend-mode: screen;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+  background-color: rgba(150, 150, 150, 0.3);
+  background-blend-mode: multiply;
 }
 
 @media (max-width: 1100px) {
