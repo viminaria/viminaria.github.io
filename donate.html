@@ -32,6 +32,7 @@
     <link rel="stylesheet" media="screen" href="css/particles.css">
 
     <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/full.css" rel="stylesheet">
   </head>
   <body>
@@ -71,10 +72,15 @@
     <div class="content donatecontainer" data-aos="fade" data-aos-duration="1500">
       <h2 class="centered donateheader">donate</h2>
       
+      <div class="coinheader">Ethereum (ETH)</div>
+      <button type="button" class="btn btn-default btn-copy js-tooltip js-copy copybutton" data-toggle="tooltip" data-placement="bottom" data-copy="0x7c7F454a3C981e47dB694f88EA6E27455E2Df59D" title="Copy to clipboard"><i class="material-icons copyicon">content_copy</i></button>
+      <code data-toggle="tooltip" data-placement="bottom" title="double-click to select all text">0x7c7F454a3C981e47dB694f88EA6E27455E2Df59D</code>
       <div class="coinheader">TurtleCoin (TRTL)</div>
-      <code data-toggle="tooltip" title="double-click to select all text">TRTLuwnxTaaVtZEk4q1GiyJDj9eDt11oGXDoXU95LprU9Je9BfCXoRRNVXjzp69pwbP1DWEGgDykpB9dqmUsjYuoePRfrmcCoTT</code>
+      <button type="button" class="btn btn-default btn-copy js-tooltip js-copy copybutton" data-toggle="tooltip" data-placement="bottom" data-copy="TRTLuwnxTaaVtZEk4q1GiyJDj9eDt11oGXDoXU95LprU9Je9BfCXoRRNVXjzp69pwbP1DWEGgDykpB9dqmUsjYuoePRfrmcCoTT" title="Copy to clipboard"><i class="material-icons copyicon">content_copy</i></button>
+      <code data-toggle="tooltip" data-placement="bottom" title="double-click to select all text">TRTLuwnxTaaVtZEk4q1GiyJDj9eDt11oGXDoXU95LprU9Je9BfCXoRRNVXjzp69pwbP1DWEGgDykpB9dqmUsjYuoePRfrmcCoTT</code>
       <div class="coinheader">Sumokoin (SUMO)</div>
-      <code data-toggle="tooltip" title="double-click to select all text">Sumoo2PMQsb2qdVHMJAmbdTZmfR6C2uKhisyVzYQZVUzWAMULUYkvj4Lo3qhEWaaZfZ2JAxv8eTuj1MxpNBpnVugP8BU8qEZvKn</code>
+      <button type="button" class="btn btn-default btn-copy js-tooltip js-copy copybutton" data-toggle="tooltip" data-placement="bottom" data-copy="Sumoo2PMQsb2qdVHMJAmbdTZmfR6C2uKhisyVzYQZVUzWAMULUYkvj4Lo3qhEWaaZfZ2JAxv8eTuj1MxpNBpnVugP8BU8qEZvKn" title="Copy to clipboard"><i class="material-icons copyicon">content_copy</i></button>
+      <code data-toggle="tooltip" data-placement="bottom" title="double-click to select all text">Sumoo2PMQsb2qdVHMJAmbdTZmfR6C2uKhisyVzYQZVUzWAMULUYkvj4Lo3qhEWaaZfZ2JAxv8eTuj1MxpNBpnVugP8BU8qEZvKn</code>
       
       <div class="thankyou"><p class="thankyoutext">thank you for donating!</p></div>
     </div>
@@ -93,6 +99,49 @@
     <script src="src/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+    function copyToClipboard(text, el) {
+      var copyTest = document.queryCommandSupported('copy');
+      var elOriginalText = el.attr('data-original-title');
+
+      if (copyTest === true) {
+        var copyTextArea = document.createElement("textarea");
+        copyTextArea.value = text;
+        document.body.appendChild(copyTextArea);
+        copyTextArea.select();
+        try {
+          var successful = document.execCommand('copy');
+          var msg = successful ? 'Copied!' : 'Whoops, not copied!';
+          el.attr('data-original-title', msg).tooltip('show');
+        } catch (err) {
+          console.log('Oops, unable to copy');
+        }
+        document.body.removeChild(copyTextArea);
+        el.attr('data-original-title', elOriginalText);
+      } else {
+        // Fallback if browser doesn't support .execCommand('copy')
+        window.prompt("Copy to clipboard: Ctrl+C or Command+C, Enter", text);
+      }
+    }
+
+    $(document).ready(function() {
+      // Initialize
+      // ---------------------------------------------------------------------
+
+      // Tooltips
+      // Requires Bootstrap 3 for functionality
+      $('.js-tooltip').tooltip();
+
+      // Copy to clipboard
+      // Grab any text in the attribute 'data-copy' and pass it to the 
+      // copy function
+      $('.js-copy').click(function() {
+        var text = $(this).attr('data-copy');
+        var el = $(this);
+        copyToClipboard(text, el);
+      });
+    });
     </script>
   </body>
 </html>

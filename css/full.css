@@ -919,14 +919,39 @@ progress::-webkit-progress-value {
 }
 
 code {
+  display: inline-block;
   text-align: center;
   margin: auto;
   display: block;
   background-color: #1f1f1f;
-  padding: 2px;
+  padding: 4px;
   user-select: text;
   font-size: 1.5em;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.copyicon {
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.copybutton {
+  float: left;
+  height: 2em;
+  width: 35px;
+  padding: 4px;
+}
+
+.copybutton:hover {
+  background-color: #a8a8a8;
+}
+
+.copybutton:focus {
+  background-color: #6b6b6b;
 }
