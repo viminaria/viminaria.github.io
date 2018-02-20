@@ -359,14 +359,13 @@ FORMATTING FOR QUIZ
 
 .poe-bottom-text {
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   left:0px;
-  padding: 10px;
+  padding: 8% 5px;
   font-size: 2vmin;
   background-color: rgba(25, 25, 25, 0.7);
   width:100%;
   margin: auto;
-  min-height: 5%;
 }
 
 /* STYLING OF INDIVIDUAL BACKGROUNDS FOR POETOOLS BOXES */
