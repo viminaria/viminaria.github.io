@@ -374,6 +374,7 @@ FORMATTING FOR QUIZ
   position:relative;
   top:80px;
   overflow:hidden;
+  user-select: none;
 }
 .square1 {
   background-image: url(../img/poetools/square1.jpg);
