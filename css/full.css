@@ -22,8 +22,7 @@ body {
 }
 
 #headerimg {
-  width: 28px;
-  margin: 0px;
+  margin: 3px 10px;
 }
 
 body::-webkit-scrollbar{
@@ -69,8 +68,7 @@ body::-webkit-scrollbar{
 h1 {
   color: #fff;
   margin:auto;
-  margin-left: 70px;
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 h2 {
