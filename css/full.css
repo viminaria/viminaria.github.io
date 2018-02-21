@@ -302,13 +302,13 @@ FORMATTING FOR QUIZ
 
 /* FORMATTING FOR POETOOLS BOXES */
 @-webkit-keyframes hover{
-  0%{background-color: rgba(150, 150, 150, 0); background-size: 100%;}
-  100%{background-color: rgba(150, 150, 150, 255); background-size: 110%;}
+  0%{background-color: rgba(150, 150, 150, 0); background-size: 100%; box-shadow: none;}
+  100%{background-color: rgba(150, 150, 150, 255); background-size: 110%; box-shadow: 0px 0px 15px rgba(0,0,0,0.8);}
   }
 
 @keyframes hover{
-  0%{background-color: rgba(150, 150, 150, 0); background-size: 100%;}
-  100%{background-color: rgba(150, 150, 150, 255); background-size: 110%;}
+  0%{background-color: rgba(150, 150, 150, 0); background-size: 100%; box-shadow: none;}
+  100%{background-color: rgba(150, 150, 150, 255); background-size: 110%; box-shadow: 0px 0px 15px rgba(0,0,0,0.8);}
   }
 
 
@@ -332,11 +332,8 @@ FORMATTING FOR QUIZ
 
 .square:hover {
   color: #fff;
-  box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
-  background-color: rgba(200, 200, 200, 255);
   background-blend-mode: multiply;
-
-  animation: hover 0.3s forwards;
+  animation: hover 0.5s forwards;
 }
 
 .aligntop {
@@ -344,6 +341,7 @@ FORMATTING FOR QUIZ
   top: 5px;
   left: 8px;
   width: 90%;
+  height: 100%;
   text-align: left;
   font-size: 1rem;
   text-overflow: ellipsis;
