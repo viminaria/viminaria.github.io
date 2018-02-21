@@ -32,8 +32,8 @@ body::-webkit-scrollbar{
 
 .content {
   margin-bottom: 180px;
-  position:relative;
-  top:80px;
+  position: relative;
+  top: 80px;
 }
 
 .navbar {
@@ -303,27 +303,29 @@ FORMATTING FOR QUIZ
 /* FORMATTING FOR POETOOLS BOXES */
 
 .square {
+  display: inline-block;
   float:left;
   position: relative;
   width: 16%;
   padding-bottom: 16%; /* = width for a 1:1 aspect ratio */
   overflow:hidden;
-  background-color: #1f1f1f;
+  background-color: rgba(150, 150, 150, 0);
   margin:0.333%;
   color:#fff;
   text-align: center;
   background-position: center;
   text-decoration:none;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 2px 4px #000;
   background-size: 100%;
   border-radius: 5px;
 }
 
 .square:hover {
-  color:#fff;
+  color: #fff;
   box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
-  background-color: rgba(150, 150, 150, 0.3);
+  background-color: rgba(150, 150, 150, 200);
   background-blend-mode: multiply;
+  background-size: 105%;
 }
 
 @media (max-width: 1100px) {
