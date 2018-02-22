@@ -300,17 +300,11 @@ FORMATTING FOR QUIZ
 	font-family: "Comic Sans MS";
 }
 
-/* FORMATTING FOR POETOOLS BOXES */
-@-webkit-keyframes hover{
-  0%{background-color: rgba(150, 150, 150, 0); background-size: 100%; box-shadow: none;}
-  100%{background-color: rgba(150, 150, 150, 255); background-size: 110%; box-shadow: 0px 0px 15px rgba(0,0,0,0.8);}
-  }
+/* FORMATTING FOR POETOOLS */
 
-@keyframes hover{
-  0%{background-color: rgba(150, 150, 150, 0); background-size: 100%; box-shadow: none;}
-  100%{background-color: rgba(150, 150, 150, 255); background-size: 110%; box-shadow: 0px 0px 15px rgba(0,0,0,0.8);}
-  }
-
+.poeheader {
+  margin: 10px;
+}
 
 .square {
   display: inline-block;
@@ -319,7 +313,7 @@ FORMATTING FOR QUIZ
   width: 16%;
   padding-bottom: 16%; /* = width for a 1:1 aspect ratio */
   overflow:hidden;
-  background-color: rgba(200, 200, 200, 0);
+  background-color: #fff;
   margin:0.333%;
   color:#fff;
   text-align: center;
@@ -328,12 +322,19 @@ FORMATTING FOR QUIZ
   text-shadow: 2px 2px 4px #000;
   background-size: 100%;
   border-radius: 5px;
+
+  -webkit-transition: opacity 2s, background-color 0.4s, background-size 0.4s, box-shadow 0.4s !important;
+  -moz-transition: opacity 2s, background-color 0.4s, background-size 0.4s, box-shadow 0.4s !important;
+  -o-transition: opacity 2s, background-color 0.4s, background-size 0.4s, box-shadow 0.4s !important;
+  transition: opacity 2s, background-color 0.4s, background-size 0.4s, box-shadow 0.4s !important;
 }
 
 .square:hover {
   color: #fff;
   background-blend-mode: multiply;
-  animation: hover 0.5s forwards;
+  background-color: #666666;
+  background-size: 110%;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.8);
 }
 
 .aligntop {
