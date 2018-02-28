@@ -307,8 +307,7 @@ FORMATTING FOR QUIZ
 }
 
 .square {
-  display: inline-block;
-  float:left;
+  float: left;
   position: relative;
   width: 16%;
   padding-bottom: 16%; /* = width for a 1:1 aspect ratio */
