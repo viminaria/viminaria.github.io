@@ -12,6 +12,7 @@ body {
   font-family: 'Ubuntu';
   background-color: #323232;
   overflow-x: hidden;
+
 }
 
 .container-fluid {
@@ -312,28 +313,24 @@ FORMATTING FOR QUIZ
   width: 16%;
   padding-bottom: 16%; /* = width for a 1:1 aspect ratio */
   overflow:hidden;
-  background-color: #fff;
   margin:0.333%;
   color:#fff;
   text-align: center;
-  background-position: center;
   text-decoration:none;
   text-shadow: 2px 2px 4px #000;
-  background-size: 100%;
   border-radius: 5px;
 
-  -webkit-transition: opacity 2s, background-color 0.3s, background-size 0.2s, box-shadow 0.3s !important;
-  -moz-transition: opacity 2s, background-color 0.3s, background-size 0.2s, box-shadow 0.3s !important;
-  -o-transition: opacity 2s, background-color 0.3s, background-size 0.2s, box-shadow 0.3s !important;
-  transition: opacity 2s, background-color 0.3s, background-size 0.2s, box-shadow 0.3s !important;
+  -webkit-transition: opacity 2s, box-shadow 0.3s !important;
+  -moz-transition: opacity 2s, box-shadow 0.3s !important;
+  -o-transition: opacity 2s, box-shadow 0.3s !important;
+  transition: opacity 2s, box-shadow 0.3s !important;
 }
 
 .square:hover {
   color: #fff;
-  background-blend-mode: multiply;
-  background-color: #888888;
-  background-size: 110%;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.8);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .aligntop {
@@ -396,7 +393,6 @@ FORMATTING FOR QUIZ
   }
 }
 
-/* STYLING OF TEXT INSIDE POETOOLS BOXES */
 .poebox {
   position:absolute;
   height:90%; /* = 100% - 2*10% padding */
@@ -405,7 +401,6 @@ FORMATTING FOR QUIZ
   padding-bottom: 10%;
 }
 
-/* STYLING OF INDIVIDUAL BACKGROUNDS FOR POETOOLS BOXES */
 .poebody {
   margin-bottom: 60px;
   position:relative;
@@ -413,40 +408,65 @@ FORMATTING FOR QUIZ
   overflow:hidden;
   user-select: none;
 }
-.square1 {
+
+.square::after {
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -3;
+  background-position: center;
+  background-size: 100%;
+  -webkit-transform-style: preserve-3d;
+
+  -webkit-transition: opacity 0.2s, transform 0.2s !important;
+  -moz-transition: opacity 0.2s, transform 0.2s !important;
+  -o-transition: opacity 0.2s, transform 0.2s !important;
+  transition: opacity 0.2s, transform 0.2s !important;
+}
+
+.square:hover::after {
+  opacity: 0.7;
+  background-blend-mode: color-burn;
+  transform: scale(1.1);
+}
+
+.square1::after {
   background-image: url(../img/poetools/square1.jpg);
 }
-.square2 {
+.square2::after {
   background-image: url(../img/poetools/square2.jpg);
 }
-.square3 {
+.square3::after {
   background-image: url(../img/poetools/square3.jpg);
 }
-.square4 {
+.square4::after {
   background-image: url(../img/poetools/square4.jpg);
 }
-.square5 {
+.square5::after {
   background-image: url(../img/poetools/square5.jpg);
 }
-.square6 {
+.square6::after {
   background-image: url(../img/poetools/square6.jpg);
 }
-.square7 {
+.square7::after {
   background-image: url(../img/poetools/square7.jpg);
 }
-.square8 {
+.square8::after {
   background-image: url(../img/poetools/square8.jpg);
 }
-.square9 {
+.square9::after {
   background-image: url(../img/poetools/square9.jpg);
 }
-.square10 {
+.square10::after {
   background-image: url(../img/poetools/square10.jpg);
 }
-.square11 {
+.square11::after {
   background-image: url(../img/poetools/square11.jpg);
 }
-.square12 {
+.square12::after {
   background-image: url(../img/poetools/square12.jpg);
 }
 
