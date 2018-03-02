@@ -65,6 +65,7 @@ body::-webkit-scrollbar{
 
 .donatelink:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 h1 {
@@ -301,6 +302,7 @@ FORMATTING FOR QUIZ
 	font-family: "Comic Sans MS";
 }
 
+
 /* FORMATTING FOR POETOOLS */
 
 .poeheader {
@@ -312,13 +314,13 @@ FORMATTING FOR QUIZ
   position: relative;
   width: 16%;
   padding-bottom: 16%; /* = width for a 1:1 aspect ratio */
-  overflow:hidden;
-  margin:0.333%;
+  overflow: hidden;
+  margin: 0.333%;
   color:#fff;
   text-align: center;
-  text-decoration:none;
-  text-shadow: 2px 2px 4px #000;
-  border-radius: 5px;
+  text-decoration: none;
+  -webkit-border-radius: 3%;
+  border-radius: 3%;
 
   -webkit-transition: opacity 2s, box-shadow 0.3s !important;
   -moz-transition: opacity 2s, box-shadow 0.3s !important;
@@ -328,32 +330,31 @@ FORMATTING FOR QUIZ
 
 .square:hover {
   color: #fff;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.8);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
 }
 
 .aligntop {
   position: absolute;
-  top: 5px;
-  left: 8px;
-  width: 90%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 8px 10px;
+  width: 100%;
   text-align: left;
   font-size: 1rem;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  background-color: rgb(25, 25, 25);
 }
 
 .poe-bottom-text {
   position: absolute;
-  bottom: 0px;
-  left:0px;
-  padding: 8% 5px;
+  bottom: -12%;
+  left: 0px;
+  padding: 6% 5px;
   font-size: 1.2rem;
-  background-color: rgba(25, 25, 25, 0.7);
-  width:100%;
+  background-color: rgb(25, 25, 25);
+  width: 100%;
   margin: auto;
 }
 
@@ -416,10 +417,11 @@ FORMATTING FOR QUIZ
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: -3;
+  z-index: -1;
   background-position: center;
-  background-size: 100%;
-  -webkit-transform-style: preserve-3d;
+  background-size: cover;
+  -webkit-border-radius: 3%;
+  border-radius: 3%;
 
   -webkit-transition: opacity 0.2s, transform 0.2s !important;
   -moz-transition: opacity 0.2s, transform 0.2s !important;
@@ -429,7 +431,6 @@ FORMATTING FOR QUIZ
 
 .square:hover::after {
   opacity: 0.7;
-  background-blend-mode: color-burn;
   transform: scale(1.1);
 }
 
