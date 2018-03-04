@@ -28,20 +28,20 @@ var muteunmute = document.getElementById('mute');
 var selectimg = document.getElementById("audioimage");
 
 function queueAudio() {
-	audio.src = "src/music/1.mp3";
+	audio.src = "../src/music/1.mp3";
 	titlecont.innerHTML = "<p>" + title[0] + " </p>";
-	selectimg.src = "img/audioplayer/1.jpg";
+	selectimg.src = "../img/audioplayer/1.jpg";
 	$('#' + 1).addClass("selectedaudio");
 }
 
 function selectAudio(nbr) {
 	$('.selectedaudio').removeClass("selectedaudio");
 	$('#' + nbr).addClass("selectedaudio");
-	audio.src = "src/music/" + nbr + ".mp3";
+	audio.src = "../src/music/" + nbr + ".mp3";
 	audio.play();
 	playpause.innerHTML = "pause";
 	titlecont.innerHTML = "<p> " + title[nbr-1] + " </p>";
-	selectimg.src = "img/audioplayer/" + nbr + ".jpg";
+	selectimg.src = "../img/audioplayer/" + nbr + ".jpg";
 	x = nbr;
 }
 
@@ -83,13 +83,13 @@ function shuffleAudio() {
 }
 
 function mainAudio() {
-	audio.src = "src/music/" + x + ".mp3";
+	audio.src = "../src/music/" + x + ".mp3";
 	audio.play();
 	$('.selectedaudio').removeClass("selectedaudio");
 	$('#' + x).addClass("selectedaudio");
 	playpause.innerHTML = "pause";
 	titlecont.innerHTML = "<p> " + title[x-1] + " </p>";
-	selectimg.src = "img/audioplayer/" + x + ".jpg";
+	selectimg.src = "../img/audioplayer/" + x + ".jpg";
 }
 
 var x = 1;
