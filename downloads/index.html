@@ -80,5 +80,11 @@
     <script>
       AOS.init();
     </script>
+    <script>
+      var fs = require('fs');
+      var files = fs.readdirSync('files');
+      
+      console.log(files);
+    </script>
   </body>
 </html>
