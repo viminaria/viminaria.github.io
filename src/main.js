@@ -34,14 +34,17 @@ $("#calendar").append('<div id="' + i + '" class="slot" onclick="openBox(this)">
 }
 
 function openBox(nbr) {
-    if (month == 12) {
+    if (month !== 12) {
+        alert("Please wait until December")
+    }
+    else if (month == 12) {
         if (day >= nbr.id) {
             document.getElementById(nbr.id).style.backgroundColor = "#f4f4f4";
             document.getElementById(nbr.id).style.boxShadow = "inset 0px 0px 10px #000";
             alert(message[nbr.id -1]);
         }
-    else {
-        alert("Let's not get ahead of ourselves here.")
+        else {
+            alert("Let's not get ahead of ourselves here.")
         }
     }
 }
