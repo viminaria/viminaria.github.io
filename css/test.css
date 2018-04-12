@@ -27,12 +27,12 @@
 }
 
 #stage {
-    perspective: 1200px;
+    perspective: 2000px;
     position: absolute;
     width: 30%;
     height: auto;
     top: 50%;
-    margin: -12% 35%;
+    margin: -13% 35%;
 }
 @webkit-keyframes slideshow {
     from { transform: rotateY(0deg);}
