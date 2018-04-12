@@ -1,0 +1,52 @@
+.animated-slideshow-item {
+    height: auto;
+    width: 100%;
+    user-select: none;
+    position: absolute;
+    border-radius: 10%;
+}
+
+#slideshow-item-1 {
+    transform: rotateY(0deg) translateX(50%);
+}
+
+#slideshow-item-2 {
+    transform: rotateY(-72deg) translateX(50%);
+}
+
+#slideshow-item-3 {
+    transform: rotateY(-144deg) translateX(50%);
+}
+
+#slideshow-item-4 {
+    transform: rotateY(-216deg) translateX(50%);
+}
+
+#slideshow-item-5 {
+    transform: rotateY(-288deg) translateX(50%);
+}
+
+#stage {
+    perspective: 1200px;
+    position: absolute;
+    width: 30%;
+    height: auto;
+    top: 50%;
+    margin: -12% 35%;
+}
+@webkit-keyframes slideshow {
+    from { transform: rotateY(0deg);}
+    to { transform: rotateY(-360deg);}
+}
+
+@keyframes slideshow {
+    from { transform: rotateY(0deg);}
+    to { transform: rotateY(-360deg);}
+}
+
+#animated-slideshow {
+    -webkit-animation: slideshow 8s linear infinite;
+    animation: slideshow 8s linear infinite;
+    transform-style: preserve-3d;
+    webkit-transform-style: preserve-3d;
+}
