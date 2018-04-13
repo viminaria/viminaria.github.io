@@ -1,6 +1,6 @@
 .animated-slideshow-item {
-    height: auto;
-    width: 100%;
+    height: 150px;
+    width: 150px;
     user-select: none;
     position: absolute;
     border-radius: 10%;
@@ -26,14 +26,54 @@
     transform: rotateY(-288deg) translateX(50%);
 }
 
+#slideshow-item-1-x {
+    transform: rotateX(0deg) translateY(50%);
+}
+
+#slideshow-item-2-x {
+    transform: rotateX(-72deg) translateY(50%);
+}
+
+#slideshow-item-3-x {
+    transform: rotateX(-144deg) translateY(50%);
+}
+
+#slideshow-item-4-x {
+    transform: rotateX(-216deg) translateY(50%);
+}
+
+#slideshow-item-5-x {
+    transform: rotateX(-288deg) translateY(50%);
+}
+
+#slideshow-item-1-z {
+    transform: rotateX(0deg) translateY(50%);
+}
+
+#slideshow-item-2-z {
+    transform: rotateX(72deg) translateY(50%);
+}
+
+#slideshow-item-3-z {
+    transform: rotateX(144deg) translateY(50%);
+}
+
+#slideshow-item-4-z {
+    transform: rotateX(216deg) translateY(50%);
+}
+
+#slideshow-item-5-z {
+    transform: rotateX(288deg) translateY(50%);
+}
+
 #stage {
-    perspective: 2000px;
+    perspective: 1200px;
     position: absolute;
     width: 30%;
-    height: auto;
-    top: 50%;
-    margin: -13% 35%;
+    height: 30%;
+    margin: 0 40%;
 }
+
 @webkit-keyframes slideshow {
     from { transform: rotateY(0deg);}
     to { transform: rotateY(-360deg);}
@@ -44,9 +84,46 @@
     to { transform: rotateY(-360deg);}
 }
 
+@webkit-keyframes slideshowx {
+    from { transform: rotateY(5deg) rotateX(0deg);}
+    to { transform: rotateY(5deg) rotateX(-360deg);}
+}
+
+@keyframes slideshowx {
+    from { transform: rotateY(5deg) rotateX(0deg);}
+    to { transform: rotateY(5deg) rotateX(-360deg);}
+}
+
+@webkit-keyframes slideshowz {
+    from { transform: rotateY(45deg) rotate3d(1, 0, 0, 0deg);}
+    to { transform: rotateY(45deg) rotate3d(1, 0, 0, -360deg);}
+}
+
+@keyframes slideshowz {
+    from { transform: rotateY(45deg) rotate3d(1, 0, 0, 0deg);}
+    to { transform: rotateY(45deg) rotate3d(1, 0, 0, -360deg);}
+}
+
 #animated-slideshow {
     -webkit-animation: slideshow 8s linear infinite;
     animation: slideshow 8s linear infinite;
     transform-style: preserve-3d;
     webkit-transform-style: preserve-3d;
+    transform-origin: 75px 0px 0px;
+}
+
+#animated-slideshow-x {
+    -webkit-animation: slideshowx 8s linear infinite;
+    animation: slideshowx 8s linear infinite;
+    transform-style: preserve-3d;
+    webkit-transform-style: preserve-3d;
+    transform-origin: 0 75px 0;
+}
+
+#animated-slideshow-z {
+    -webkit-animation: slideshowz 8s linear infinite;
+    animation: slideshowz 8s linear infinite;
+    transform-style: preserve-3d;
+    webkit-transform-style: preserve-3d;
+    transform-origin: 75px 75px 0px;
 }
