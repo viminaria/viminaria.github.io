@@ -7,6 +7,16 @@
     margin: auto;
 }
 
+.animated-item {
+    width: 20vw;
+    height: 20vw;
+    user-select: none;
+    position: absolute;
+    border-radius: 1vw;
+    margin: auto;
+    transition: border-radius 1.2s ease-in-out;
+}
+
 #slideshow-item-1 { transform: rotateY(0deg) translateX(50%); }
 #slideshow-item-2 { transform: rotateY(-72deg) translateX(50%); }
 #slideshow-item-3 { transform: rotateY(-144deg) translateX(50%); }
@@ -22,6 +32,8 @@
 #slideshow-item-3-z { transform: rotateX(144deg) translateY(50%); }
 #slideshow-item-4-z { transform: rotateX(216deg) translateY(50%); }
 #slideshow-item-5-z { transform: rotateX(288deg) translateY(50%); }
+#flip-item-1 { transform: rotate3d(0,1,0, 180deg);}
+#flip-item-2 { transform: rotate3d(1,0,0, 0deg);}
 
 #stage {
     perspective: 1200px;
@@ -60,8 +72,27 @@
     to { transform: rotateY(45deg) rotate3d(1, 0, 0, -360deg);}
 }
 
+@webkit-keyframes animation {
+    from { transform: rotateY(0deg);}
+    to { transform: rotateY(-1620deg);}
+}
+
+@keyframes animation {
+    from { transform: rotateY(0deg);}
+    to { transform: rotateY(-1620deg);}
+}
+
+@webkit-keyframes animationout {
+    from { transform: rotateY(-540deg);}
+    to { transform: rotateY(-360deg);}
+}
+
+@keyframes animationout {
+    from { transform: rotateY(-540deg);}
+    to { transform: rotateY(-360deg);}
+}
+
 #animated-slideshow {
-    margin: auto;
     -webkit-animation: slideshow 3s linear infinite;
     animation: slideshow 3s linear infinite;
     transform-style: preserve-3d;
@@ -70,7 +101,6 @@
 }
 
 #animated-slideshow-x {
-    margin: auto;
     -webkit-animation: slideshowx 3s linear infinite;
     animation: slideshowx 3s linear infinite;
     transform-style: preserve-3d;
@@ -79,10 +109,33 @@
 }
 
 #animated-slideshow-z {
-    margin: auto;
     -webkit-animation: slideshowz 3s linear infinite;
     animation: slideshowz 3s linear infinite;
     transform-style: preserve-3d;
     webkit-transform-style: preserve-3d;
     transform-origin: 10vw 10vw 0;
+}
+
+#flip-animation-box:hover {
+    -webkit-animation: animation 1s ease-in-out forwards;
+    animation: animation 1s ease-in-out forwards;
+    transform-style: preserve-3d;
+    webkit-transform-style: preserve-3d;
+    border-radius: 10vw;
+}
+
+#flip-animation-box:hover > img {
+    border-radius: 20vw;
+    transform-style: preserve-3d;
+    webkit-transform-style: preserve-3d;
+}
+
+#flip-animation-box {
+    -webkit-animation: animationout 1s ease-in-out forwards;
+    animation: animationout 1s ease-in-out forwards;
+    transform-style: preserve-3d;
+    webkit-transform-style: preserve-3d;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 1vw;
 }
