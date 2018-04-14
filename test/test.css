@@ -1,0 +1,88 @@
+.animated-slideshow-item {
+    width: 20vw;
+    height: 20vw;
+    user-select: none;
+    position: absolute;
+    border-radius: 5%;
+    margin: auto;
+}
+
+#slideshow-item-1 { transform: rotateY(0deg) translateX(50%); }
+#slideshow-item-2 { transform: rotateY(-72deg) translateX(50%); }
+#slideshow-item-3 { transform: rotateY(-144deg) translateX(50%); }
+#slideshow-item-4 { transform: rotateY(-216deg) translateX(50%); }
+#slideshow-item-5 { transform: rotateY(-288deg) translateX(50%); }
+#slideshow-item-1-x { transform: rotateX(0deg) translateY(50%); }
+#slideshow-item-2-x { transform: rotateX(-72deg) translateY(50%); }
+#slideshow-item-3-x { transform: rotateX(-144deg) translateY(50%); }
+#slideshow-item-4-x { transform: rotateX(-216deg) translateY(50%); }
+#slideshow-item-5-x { transform: rotateX(-288deg) translateY(50%); }
+#slideshow-item-1-z { transform: rotateX(0deg) translateY(50%); }
+#slideshow-item-2-z { transform: rotateX(72deg) translateY(50%); }
+#slideshow-item-3-z { transform: rotateX(144deg) translateY(50%); }
+#slideshow-item-4-z { transform: rotateX(216deg) translateY(50%); }
+#slideshow-item-5-z { transform: rotateX(288deg) translateY(50%); }
+
+#stage {
+    perspective: 1200px;
+    position: absolute;
+    width: 20vw;
+    margin: auto 40%;
+}
+
+@webkit-keyframes slideshow {
+    from { transform: rotateY(0deg);}
+    to { transform: rotateY(-360deg);}
+}
+
+@keyframes slideshow {
+    from { transform: rotateY(0deg);}
+    to { transform: rotateY(-360deg);}
+}
+
+@webkit-keyframes slideshowx {
+    from { transform: rotateX(0deg);}
+    to { transform: rotateX(-360deg);}
+}
+
+@keyframes slideshowx {
+    from { transform: rotateX(0deg);}
+    to { transform: rotateX(-360deg);}
+}
+
+@webkit-keyframes slideshowz {
+    from { transform: rotateY(45deg) rotate3d(1, 0, 0, 0deg);}
+    to { transform: rotateY(45deg) rotate3d(1, 0, 0, -360deg);}
+}
+
+@keyframes slideshowz {
+    from { transform: rotateY(45deg) rotate3d(1, 0, 0, 0deg);}
+    to { transform: rotateY(45deg) rotate3d(1, 0, 0, -360deg);}
+}
+
+#animated-slideshow {
+    margin: auto;
+    -webkit-animation: slideshow 3s linear infinite;
+    animation: slideshow 3s linear infinite;
+    transform-style: preserve-3d;
+    webkit-transform-style: preserve-3d;
+    transform-origin: 10vw 0 0;
+}
+
+#animated-slideshow-x {
+    margin: auto;
+    -webkit-animation: slideshowx 3s linear infinite;
+    animation: slideshowx 3s linear infinite;
+    transform-style: preserve-3d;
+    webkit-transform-style: preserve-3d;
+    transform-origin: 0 10vw 0;
+}
+
+#animated-slideshow-z {
+    margin: auto;
+    -webkit-animation: slideshowz 3s linear infinite;
+    animation: slideshowz 3s linear infinite;
+    transform-style: preserve-3d;
+    webkit-transform-style: preserve-3d;
+    transform-origin: 10vw 10vw 0;
+}
