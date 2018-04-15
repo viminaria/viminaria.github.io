@@ -2,6 +2,7 @@
     width: 20vw;
     height: 20vw;
     user-select: none;
+    pointer-events: none;
     position: absolute;
     border-radius: 5%;
     margin: auto;
@@ -11,10 +12,11 @@
     width: 20vw;
     height: 20vw;
     user-select: none;
+    pointer-events: none;
     position: absolute;
-    border-radius: 1vw;
+    border-radius: 0vw;
     margin: auto;
-    transition: border-radius 1.2s ease-in-out;
+    transition: border-radius 0.7s ease-in-out;
 }
 
 #slideshow-item-1 { transform: rotateY(0deg) translateX(50%); }
@@ -74,12 +76,12 @@
 
 @webkit-keyframes animation {
     from { transform: rotateY(0deg);}
-    to { transform: rotateY(-1620deg);}
+    to { transform: rotateY(-900deg);}
 }
 
 @keyframes animation {
     from { transform: rotateY(0deg);}
-    to { transform: rotateY(-1620deg);}
+    to { transform: rotateY(-900deg);}
 }
 
 @webkit-keyframes animationout {
@@ -117,8 +119,8 @@
 }
 
 #flip-animation-box:hover {
-    -webkit-animation: animation 1s ease-in-out forwards;
-    animation: animation 1s ease-in-out forwards;
+    -webkit-animation: animation 0.4s ease-in-out forwards;
+    animation: animation 0.4s ease-in-out forwards;
     transform-style: preserve-3d;
     webkit-transform-style: preserve-3d;
     border-radius: 10vw;
@@ -131,8 +133,8 @@
 }
 
 #flip-animation-box {
-    -webkit-animation: animationout 1s ease-in-out forwards;
-    animation: animationout 1s ease-in-out forwards;
+    -webkit-animation: animationout 0.5s ease-in-out forwards;
+    animation: animationout 0.5s ease-in-out forwards;
     transform-style: preserve-3d;
     webkit-transform-style: preserve-3d;
     width: 20vw;
