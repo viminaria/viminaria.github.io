@@ -116,7 +116,7 @@
 }
 
 #wrapper {
-    width: 24vh;
+    width: 40vmin;
     height: auto;
     position: relative;
     margin: auto;
@@ -125,20 +125,20 @@
 }
 
 .animated-cube {
-    height: 24vh;
-    width: 24vh;
+    height: 40vmin;
+    width: 40vmin;
     transform-style: preserve-3d;
-    transform-origin: 12;
+    transform-origin: 20vmin;
     transform: rotate3d(0, 1, 1, 0deg);
     animation: cubechangeside 10s ease-in-out infinite;
 }
 
 .cube-face {
     position: absolute;
-    height: 24vh;
-    width: 24vh;
+    height: 40vmin;
+    width: 40vmin;
     user-select: none;
-    line-height: 24vh;
+    line-height: 40vmin;
 }
 
 .cube-face::after {
@@ -147,8 +147,8 @@
     top: 0;
     left: 0;
     z-index: -1;
-    height: 24vh;
-    width: 24vh;
+    height: 40vmin;
+    width: 40vmin;
     background-image: url("../img/viminaria.svg");
     background-size: cover;
     opacity: 0.7;
@@ -157,27 +157,27 @@
 }
 
 #cube-face-front {
-    transform: translateZ(12vh);
+    transform: translateZ(20vmin);
 }
 
 #cube-face-back {
-    transform: rotateX(180deg) translateZ(12vh) rotateZ(180deg);
+    transform: rotateX(180deg) translateZ(20vmin) rotateZ(180deg);
 }
 
 #cube-face-top{
-    transform: rotateX(90deg) translateZ(12vh);
+    transform: rotateX(90deg) translateZ(20vmin);
 }
 
 #cube-face-bottom{
-    transform: rotateX(270deg) translateZ(12vh);
+    transform: rotateX(270deg) translateZ(20vmin);
 }
 
 #cube-face-left {
-    transform: rotateY(270deg) translateZ(12vh);
+    transform: rotateY(270deg) translateZ(20vmin);
 }
 
 #cube-face-right {
-    transform: rotateY(90deg) translateZ(12vh);
+    transform: rotateY(90deg) translateZ(20vmin);
 }
 
 @keyframes cubechangeside {
