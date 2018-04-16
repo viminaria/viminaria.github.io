@@ -123,8 +123,8 @@
     width: 20vw;
     transform-style: preserve-3d;
     transform-origin: 10vw;
-    transform: rotate3d(1, 1, 0, 45deg);
-    animation: cubechangeside 4s ease-in-out;
+    transform: rotate3d(0, 1, 1, 0deg);
+    animation: cubechangeside 10s ease-in-out infinite;
 }
 
 .cube-face {
@@ -163,10 +163,11 @@
 }
 
 @keyframes cubechangeside {
-    17% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) }
-    33% { transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) }
-    50% { transform: rotateX(0deg) rotateY(-180deg) rotateZ(0deg) }
-    67% { transform: rotateX(-90deg) rotateY(-360deg) rotateZ(0deg) }
-    84% { transform: rotateX(270deg) rotateY(-270deg) rotateZ(0deg) }
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) }
+    17% { transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) }
+    33% { transform: rotateX(0deg) rotateY(-180deg) rotateZ(0deg) }
+    50% { transform: rotateX(-90deg) rotateY(-360deg) rotateZ(0deg) }
+    67% { transform: rotateX(0deg) rotateY(-630deg) rotateZ(0deg) }
+    84% { transform: rotateX(-90deg) rotateY(-540deg) rotateZ(180deg) }
     100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) }
 }
