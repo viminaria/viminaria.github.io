@@ -137,6 +137,7 @@
     height: 20vw;
     width: 20vw;
     line-height: 20vw;
+    user-select: none;
 }
 
 .cube-face::after {
