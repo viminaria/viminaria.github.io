@@ -37,6 +37,11 @@ body::-webkit-scrollbar{
   top: 80px;
 }
 
+.altcontent {
+  margin-bottom: 180px;
+  position: relative;
+}
+
 .navbar {
   display: block;
   background-color: rgba(25, 25, 25, 0.9);
