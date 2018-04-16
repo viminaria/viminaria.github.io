@@ -1,3 +1,8 @@
+.testtext {
+    font-size: 3em;
+    color: white;
+}
+
 .animated-slideshow-item {
     width: 20vw;
     height: 20vw;
