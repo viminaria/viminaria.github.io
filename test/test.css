@@ -1,11 +1,15 @@
 .testtext {
     font-size: 3em;
-    color: white;
+    color: #fff;
+}
+
+.testtextmargin {
+    margin: 10px;
 }
 
 .animated-slideshow-item {
-    width: 24vh;
-    height: 24vh;
+    width: 40vmin;
+    height: 40vmin;
     user-select: none;
     pointer-events: none;
     position: absolute;
@@ -14,8 +18,8 @@
 }
 
 .animated-item {
-    width: 24vh;
-    height: 24vh;
+    width: 40vmin;
+    height: 40vmin;
     user-select: none;
     pointer-events: none;
     position: absolute;
@@ -45,9 +49,9 @@
 #stage {
     perspective: 1200px;
     position: relative;
-    width: 24vh;
+    width: 40vmin;
     margin: auto;
-    margin-top: 15vh;
+    margin-top: 20vh;
 }
 
 @keyframes slideshow {
@@ -79,21 +83,21 @@
     -webkit-animation: slideshow 3s linear infinite;
     animation: slideshow 3s linear infinite;
     transform-style: preserve-3d;
-    transform-origin: 12vh 0 0;
+    transform-origin: 20vmin 0 0;
 }
 
 #animated-slideshow-x {
     -webkit-animation: slideshowx 3s linear infinite;
     animation: slideshowx 3s linear infinite;
     transform-style: preserve-3d;
-    transform-origin: 0 12vh 0;
+    transform-origin: 0 20vmin 0;
 }
 
 #animated-slideshow-z {
     -webkit-animation: slideshowz 3s linear infinite;
     animation: slideshowz 3s linear infinite;
     transform-style: preserve-3d;
-    transform-origin: 12vh 12vh 0;
+    transform-origin: 20vmin 20vmin 0;
 }
 
 #flip-animation-box:hover {
@@ -103,7 +107,7 @@
 }
 
 #flip-animation-box:hover > img {
-    border-radius: 24vh;
+    border-radius: 40vmin;
     transform-style: preserve-3d;
 }
 
@@ -111,8 +115,8 @@
     -webkit-animation: animationout 0.7s ease-in-out forwards;
     animation: animationout 0.7s ease-in-out forwards;
     transform-style: preserve-3d;
-    width: 24vh;
-    height: 24vh;
+    width: 40vmin;
+    height: 40vmin;
 }
 
 #wrapper {
