@@ -33,6 +33,12 @@ for(i=1; i<=24; i++) {
 $("#calendar").append('<div id="' + i + '" class="slot" onclick="openBox(this)"><p class="christmasnumber">' + i + '</p></div>')
 }
 
+if (month == 12){
+    for(i=1; i<=day; i++) {
+        $('#'+ i ).css("border", "solid", "2px", "black");
+    }
+}
+
 function openBox(nbr) {
     if (month !== 12) {
         alert("Please wait until December")
@@ -48,3 +54,4 @@ function openBox(nbr) {
         }
     }
 }
+

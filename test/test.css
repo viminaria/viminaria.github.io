@@ -160,29 +160,14 @@
     box-shadow: inset 0 0 3em 0.4em black;
 }
 
-#cube-face-front {
-    transform: translateZ(20vmin);
-}
+#cube-face-front { transform: translateZ(20vmin); }
+#cube-face-back { transform: rotateX(180deg) translateZ(20vmin) rotateZ(180deg); }
+#cube-face-top { transform: rotateX(90deg) translateZ(20vmin); }
+#cube-face-bottom { transform: rotateX(270deg) translateZ(20vmin); }
+#cube-face-left { transform: rotateY(270deg) translateZ(20vmin); }
+#cube-face-right { transform: rotateY(90deg) translateZ(20vmin); }
 
-#cube-face-back {
-    transform: rotateX(180deg) translateZ(20vmin) rotateZ(180deg);
-}
-
-#cube-face-top{
-    transform: rotateX(90deg) translateZ(20vmin);
-}
-
-#cube-face-bottom{
-    transform: rotateX(270deg) translateZ(20vmin);
-}
-
-#cube-face-left {
-    transform: rotateY(270deg) translateZ(20vmin);
-}
-
-#cube-face-right {
-    transform: rotateY(90deg) translateZ(20vmin);
-}
+/* OLD KEYFRAMES FOR CUBE ANIMATION, NOW USING JQUERY TRANSIT FOR ANIMATION
 
 @keyframes cubechangeside {
     0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) }
@@ -193,6 +178,7 @@
     84% { transform: rotateX(-90deg) rotateY(180deg) rotateZ(180deg) }
     100% { transform: rotateX(-180deg) rotateY(180deg) rotateZ(180deg) }
 }
+*/
 
 .transitbox {
     width: 20vmin;
