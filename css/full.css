@@ -22,6 +22,11 @@ body {
   margin-left:0px
 }
 
+.errorheader {
+  font-size: 10rem;
+  color: white;
+}
+
 #headerimg {
   margin: 3px 0;
   margin-right: 10px;
