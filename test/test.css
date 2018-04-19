@@ -224,3 +224,32 @@
     width: 100%;
     margin: auto;
 }
+
+.transit-banner-ad-horisontal {
+    height: 300px;
+    width: 900px;
+    background-color: white;
+}
+
+.banner-ad-transit-object {
+    position: absolute;
+    height: 300px;
+    width: 800px;
+    transform-style: preserve-3d;
+}
+
+#transit-item1 {
+    background-image: url("src/cucumber.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transform: rotateZ(10deg);
+    opacity: 0;
+    left: 50px;
+}
+
+#transit-text1 {
+    top: 200px;
+    left: 250px;
+    opacity: 0;
+    font-size: 3em;
+}
