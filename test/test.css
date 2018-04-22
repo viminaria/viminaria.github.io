@@ -23,9 +23,9 @@
     user-select: none;
     pointer-events: none;
     position: absolute;
-    border-radius: 0vh;
+    border-radius: 0vmin;
     margin: auto;
-    transition: border-radius 1s ease-in-out;
+    transform-style: preserve-3d;
 }
 
 #slideshow-item-1 { transform: rotateY(0deg) translateX(50%); }
@@ -44,7 +44,7 @@
 #slideshow-item-4-z { transform: rotateX(216deg) translateY(50%); }
 #slideshow-item-5-z { transform: rotateX(288deg) translateY(50%); }
 #flip-item-1 { transform: rotate3d(0,1,0, 180deg);}
-#flip-item-2 { transform: rotate3d(1,0,0, 0deg);}
+#flip-item-2 { transform: rotate3d(0,0,0, 0deg);}
 
 #stage {
     perspective: 1200px;
@@ -69,16 +69,6 @@
     to { transform: rotateY(45deg) rotate3d(1, 0, 0, -360deg);}
 }
 
-@keyframes animation {
-    from { transform: rotateY(0deg);}
-    to { transform: rotateY(-900deg);}
-}
-
-@keyframes animationout {
-    from { transform: rotateY(-540deg);}
-    to { transform: rotateY(-360deg);}
-}
-
 #animated-slideshow {
     -webkit-animation: slideshow 3s linear infinite;
     animation: slideshow 3s linear infinite;
@@ -100,20 +90,7 @@
     transform-origin: 20vmin 20vmin 0;
 }
 
-#flip-animation-box:hover {
-    -webkit-animation: animation 0.8s ease-in-out forwards;
-    animation: animation 0.8s ease-in-out forwards;
-    transform-style: preserve-3d;
-}
-
-#flip-animation-box:hover > img {
-    border-radius: 40vmin;
-    transform-style: preserve-3d;
-}
-
 #flip-animation-box {
-    -webkit-animation: animationout 0.7s ease-in-out forwards;
-    animation: animationout 0.7s ease-in-out forwards;
     transform-style: preserve-3d;
     width: 40vmin;
     height: 40vmin;
@@ -180,37 +157,6 @@
 }
 */
 
-.transitbox {
-    width: 20vmin;
-    height: auto;
-    position: relative;
-    margin: auto;
-    margin-top: 20vh;
-}
-
-.transitobject {
-    width: 20vmin;
-    height: 20vmin;
-    position: relative;
-    line-height: 20vmin;
-    user-select: none;
-    border: solid 2px black;
-    transform-style: preserve-3d;
-}
-
-#transitobject1 {
-    background-color: white;
-}
-
-#transitobject2 {
-    background-color: lightblue;
-}
-
-.transitbutton {
-    width: 100%;
-    margin: auto;
-}
-
 .transit-banner-ad-horisontal {
     height: 300px;
     width: 900px;
@@ -224,7 +170,7 @@
     transform-style: preserve-3d;
 }
 
-#transit-item1 {
+#transitad-item1 {
     background-image: url("src/cucumber.png");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -233,7 +179,7 @@
     left: 50px;
 }
 
-#transit-text1 {
+#transitad-text1 {
     top: 200px;
     left: 250px;
     opacity: 0;
