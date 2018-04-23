@@ -179,7 +179,17 @@
     left: 50px;
 }
 
-#transitad-text1 {
+#transitad-item2 {
+    background-image: url("src/cucumbersandwich.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 30%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    left: 0px;
+}
+
+#transitad-text {
     top: 200px;
     left: 250px;
     opacity: 0;
