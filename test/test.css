@@ -182,8 +182,8 @@
 #transitad-item2 {
     background-image: url("src/cucumbersandwich.jpg");
     background-size: cover;
-    height: 100%;
-    width: 30%;
+    height: 300px;
+    width: 400px;
     background-repeat: no-repeat;
     opacity: 0;
     left: 0px;
@@ -197,6 +197,6 @@
 }
 
 #transitad-text3 {
-    top: 100px;
+    top: 110px;
     left: 425px;
 }
