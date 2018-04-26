@@ -200,3 +200,29 @@
     top: 110px;
     left: 425px;
 }
+
+#starfield {
+    width: 100vw;
+    height: Calc(100vh - 100px);
+    top: 60px;
+    bottom: 40px;
+    margin: 0;
+    background-color: black;
+    perspective: 80vmin;
+    overflow: hidden;
+}
+
+.starfield-star {
+    background-color: #fff;
+    position: absolute;
+    border-radius: 100%;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    animation: staranim 10s linear infinite;
+}
+
+@keyframes staranim {
+    0% {transform: translate3d(50vw, 50vh, -400vmin)};
+    100% {transform: translate3d(50vw, 50vh, 200vmin)};
+};
+
