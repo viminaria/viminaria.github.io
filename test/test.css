@@ -208,17 +208,16 @@
     bottom: 40px;
     margin: 0;
     background-color: black;
-    perspective: 80vmin;
+    perspective: 60vmin;
     overflow: hidden;
 }
 
 .starfield-star {
-    background-color: #fff;
     position: absolute;
     border-radius: 100%;
     box-sizing: border-box;
     transform-style: preserve-3d;
-    animation: staranim 10s linear infinite;
+    animation: staranim 20s linear infinite;
 }
 
 @keyframes staranim {
