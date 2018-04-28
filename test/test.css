@@ -207,20 +207,22 @@
     top: 60px;
     bottom: 40px;
     margin: 0;
-    background-color: black;
-    perspective: 60vmin;
+    background-image: url('src/nasa.jpg');
+    background-size: cover;
+    perspective: 90vmin;
     overflow: hidden;
+    transform-style: preserve-3d;
 }
 
 .starfield-star {
     position: absolute;
     border-radius: 100%;
     box-sizing: border-box;
-    transform-style: preserve-3d;
     animation: staranim 20s linear infinite;
+    transform-style: preserve-3d;
 }
 
 @keyframes staranim {
     0% {transform: translate3d(50vw, 50vh, -400vmin)};
-    100% {transform: translate3d(50vw, 50vh, 200vmin)};
+    100% {transform: translate3d(50vw, 50vh, 1000vmin)};
 };
