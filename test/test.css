@@ -1,0 +1,228 @@
+.testtext {
+    font-size: 3em;
+    color: #fff;
+}
+
+.testtextmargin {
+    margin: 10px;
+}
+
+.animated-slideshow-item {
+    width: 40vmin;
+    height: 40vmin;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    border-radius: 5%;
+    margin: auto;
+}
+
+.animated-item {
+    width: 40vmin;
+    height: 40vmin;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    border-radius: 0vmin;
+    margin: auto;
+    transform-style: preserve-3d;
+}
+
+#slideshow-item-1 { transform: rotateY(0deg) translateX(50%); }
+#slideshow-item-2 { transform: rotateY(-72deg) translateX(50%); }
+#slideshow-item-3 { transform: rotateY(-144deg) translateX(50%); }
+#slideshow-item-4 { transform: rotateY(-216deg) translateX(50%); }
+#slideshow-item-5 { transform: rotateY(-288deg) translateX(50%); }
+#slideshow-item-1-x { transform: rotateX(0deg) translateY(50%); }
+#slideshow-item-2-x { transform: rotateX(-72deg) translateY(50%); }
+#slideshow-item-3-x { transform: rotateX(-144deg) translateY(50%); }
+#slideshow-item-4-x { transform: rotateX(-216deg) translateY(50%); }
+#slideshow-item-5-x { transform: rotateX(-288deg) translateY(50%); }
+#slideshow-item-1-z { transform: rotateX(0deg) translateY(50%); }
+#slideshow-item-2-z { transform: rotateX(72deg) translateY(50%); }
+#slideshow-item-3-z { transform: rotateX(144deg) translateY(50%); }
+#slideshow-item-4-z { transform: rotateX(216deg) translateY(50%); }
+#slideshow-item-5-z { transform: rotateX(288deg) translateY(50%); }
+#flip-item-1 { transform: rotate3d(0,1,0, 180deg);}
+#flip-item-2 { transform: rotate3d(0,0,0, 0deg);}
+
+#stage {
+    perspective: 1200px;
+    position: relative;
+    width: 40vmin;
+    margin: auto;
+    margin-top: 20vh;
+}
+
+@keyframes slideshow {
+    from { transform: rotateY(0deg);}
+    to { transform: rotateY(-360deg);}
+}
+
+@keyframes slideshowx {
+    from { transform: rotateX(0deg);}
+    to { transform: rotateX(-360deg);}
+}
+
+@keyframes slideshowz {
+    from { transform: rotateY(45deg) rotate3d(1, 0, 0, 0deg);}
+    to { transform: rotateY(45deg) rotate3d(1, 0, 0, -360deg);}
+}
+
+#animated-slideshow {
+    -webkit-animation: slideshow 3s linear infinite;
+    animation: slideshow 3s linear infinite;
+    transform-style: preserve-3d;
+    transform-origin: 20vmin 0 0;
+}
+
+#animated-slideshow-x {
+    -webkit-animation: slideshowx 3s linear infinite;
+    animation: slideshowx 3s linear infinite;
+    transform-style: preserve-3d;
+    transform-origin: 0 20vmin 0;
+}
+
+#animated-slideshow-z {
+    -webkit-animation: slideshowz 3s linear infinite;
+    animation: slideshowz 3s linear infinite;
+    transform-style: preserve-3d;
+    transform-origin: 20vmin 20vmin 0;
+}
+
+#flip-animation-box {
+    transform-style: preserve-3d;
+    width: 40vmin;
+    height: 40vmin;
+}
+
+#wrapper {
+    width: 40vmin;
+    height: auto;
+    position: relative;
+    margin: auto;
+    margin-top: 20vh;
+    perspective: 1200px
+}
+
+.animated-cube {
+    height: 40vmin;
+    width: 40vmin;
+    transform-style: preserve-3d;
+    transform-origin: 20vmin;
+    transform: rotate3d(0, 1, 1, 0deg);
+    animation: cubechangeside 10s ease-in-out infinite;
+}
+
+.cube-face {
+    position: absolute;
+    height: 40vmin;
+    width: 40vmin;
+    user-select: none;
+    line-height: 40vmin;
+}
+
+.cube-face::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 40vmin;
+    width: 40vmin;
+    background-image: url("../img/viminaria.svg");
+    background-size: cover;
+    opacity: 0.7;
+    background-color: rgba(120, 120, 120, 0.3);
+    box-shadow: inset 0 0 3em 0.4em black;
+}
+
+#cube-face-front { transform: translateZ(20vmin); }
+#cube-face-back { transform: rotateX(180deg) translateZ(20vmin) rotateZ(180deg); }
+#cube-face-top { transform: rotateX(90deg) translateZ(20vmin); }
+#cube-face-bottom { transform: rotateX(270deg) translateZ(20vmin); }
+#cube-face-left { transform: rotateY(270deg) translateZ(20vmin); }
+#cube-face-right { transform: rotateY(90deg) translateZ(20vmin); }
+
+/* OLD KEYFRAMES FOR CUBE ANIMATION, NOW USING JQUERY TRANSIT FOR ANIMATION
+
+@keyframes cubechangeside {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) }
+    17% { transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) }
+    33% { transform: rotateX(0deg) rotateY(-180deg) rotateZ(0deg) }
+    50% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg) }
+    67% { transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg) }
+    84% { transform: rotateX(-90deg) rotateY(180deg) rotateZ(180deg) }
+    100% { transform: rotateX(-180deg) rotateY(180deg) rotateZ(180deg) }
+}
+*/
+
+.transit-banner-ad-horisontal {
+    height: 300px;
+    width: 900px;
+    background-color: white;
+}
+
+.banner-ad-transit-object {
+    position: absolute;
+    height: 300px;
+    width: 800px;
+    transform-style: preserve-3d;
+}
+
+#transitad-item1 {
+    background-image: url("src/cucumber.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transform: rotateZ(10deg);
+    opacity: 0;
+    left: 50px;
+}
+
+#transitad-item2 {
+    background-image: url("src/cucumbersandwich.jpg");
+    background-size: cover;
+    height: 300px;
+    width: 400px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    left: 0px;
+}
+
+.transitad-text {
+    top: 200px;
+    left: 250px;
+    opacity: 0;
+    font-size: 3em;
+}
+
+#transitad-text3 {
+    top: 110px;
+    left: 425px;
+}
+
+#starfield {
+    width: 100vw;
+    height: Calc(100vh - 100px);
+    top: 60px;
+    bottom: 40px;
+    margin: 0;
+    background-image: url('src/nasa.jpg');
+    background-size: cover;
+    perspective: 90vmin;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.starfield-star {
+    position: absolute;
+    border-radius: 100%;
+    box-sizing: border-box;
+    animation: staranim 20s linear infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes staranim {
+    0% {transform: translate3d(50vw, 50vh, -400vmin)};
+    100% {transform: translate3d(50vw, 50vh, 1000vmin)};
+};
