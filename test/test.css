@@ -224,6 +224,6 @@
 }
 
 @keyframes staranim {
-    0% {transform: translate3d(50vw, 50vh, -200vmin)};
-    100% {transform: translate3d(50vw, 50vh, 50vmin)};
+    from {transform: translate3d(50vw, 50vh, -500vmin)};
+    to {transform: translate3d(50vw, 50vh, 1000vmin)};
 };
