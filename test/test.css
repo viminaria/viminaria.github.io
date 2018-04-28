@@ -207,9 +207,10 @@
     top: 60px;
     bottom: 40px;
     margin: 0;
+    background-color: black;
     background-image: url('src/nasa.jpg');
     background-size: cover;
-    perspective: 90vmin;
+    perspective: 5vmin;
     overflow: hidden;
     transform-style: preserve-3d;
 }
@@ -218,11 +219,11 @@
     position: absolute;
     border-radius: 100%;
     box-sizing: border-box;
-    animation: staranim 20s linear infinite;
+    animation: staranim linear infinite;
     transform-style: preserve-3d;
 }
 
 @keyframes staranim {
-    0% {transform: translate3d(50vw, 50vh, -400vmin)};
-    100% {transform: translate3d(50vw, 50vh, 1000vmin)};
+    0% {transform: translate3d(50vw, 50vh, -200vmin)};
+    100% {transform: translate3d(50vw, 50vh, 50vmin)};
 };
