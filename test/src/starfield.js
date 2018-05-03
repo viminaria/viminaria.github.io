@@ -6,19 +6,20 @@ var starcss = styletag.sheet;
 for (i=1; i<=starcount; i++){
     $('#starfield').append('<div class="starfield-star"></div>');
     var starsize = 1 + Math.random()*10;
+    var starcolorrand = 1 + Math.random()*10;
     var animdelay = Math.floor(Math.random()*-400);
     var animdur = 40 - starsize*3;
 
-    if (starsize > 10){
+    if (starcolorrand > 10){
         starcolor = "rgb(210, 210, 255)";
     }
-    else if (starsize > 7){
+    else if (starcolorrand > 7){
         starcolor = "rgb(255, 255, 220)";
     }
-    else if (starsize > 5){
+    else if (starcolorrand > 5){
         starcolor = "rgb(255, 255, 180)";
     }
-    else if (starsize > 3){
+    else if (starcolorrand > 3){
         starcolor = "rgb(255, 180, 180)";
     }
     else {
