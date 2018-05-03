@@ -5,7 +5,7 @@ var starcss = styletag.sheet;
 
 for (i=1; i<=starcount; i++){
     $('#starfield').append('<div class="starfield-star"></div>');
-    var starsize = 1 + Math.random()*10;
+    var starsize = 2 + Math.random()*10;
     var starcolorrand = 1 + Math.random()*10;
     var animdelay = Math.floor(Math.random()*-400);
     var animdur = 40 - starsize*3;
@@ -26,6 +26,6 @@ for (i=1; i<=starcount; i++){
         starcolor = "white";
     }
 
-    var trans3d = Math.floor(Math.random()*400-starsize*25) + "vw, " + Math.floor(Math.random()*400-starsize*25) + "vh, " + Math.floor(Math.random()*100) + "vmin";
+    var trans3d = Math.floor(Math.random()*400-starcolorrand*25) + "vw, " + Math.floor(Math.random()*400-starcolorrand*25) + "vh, " + Math.floor(Math.random()*100) + "vmin";
     starcss.insertRule('.starfield-star:nth-child('+ i +'){width: '+ starsize +'vmin; height: '+ starsize +'vmin;transform: translate3d('+ trans3d +');background-color:'+ starcolor +';box-shadow: 0px 0px 12vmin '+ starsize/3 +'vmin '+ starcolor +';animation-delay:'+ animdelay +'s;animation-duration:' + animdur + 's;}', 0);
 }
