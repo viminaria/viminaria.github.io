@@ -236,7 +236,6 @@
     transform-style: preserve-3d;
     animation: flyeranim ease-in-out infinite 20s;
     z-index: 20;
-    box-shadow: 0 0 1vmin white;
 }
 
 @keyframes staranim {
