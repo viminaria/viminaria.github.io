@@ -236,6 +236,7 @@
     transform-style: preserve-3d;
     animation: flyeranim ease-in-out infinite 20s;
     z-index: 20;
+    transform: rotateX(50deg);
 }
 
 @keyframes staranim {
@@ -244,9 +245,9 @@
 }
 
 @keyframes flyeranim {
-    25% {transform: translate3d(20vw, -5vh, 0) rotate(-30deg);}
-    50% {transform: translate3d(0vw, 0vh, 0) rotate(0deg);}
-    75% {transform: translate3d(-20vw, -5vh, 0) rotate(30deg);}
-    100% {transform: translate3d(0vw, 0vh, 0) rotate(0deg);}
+    25% {transform: translate3d(20vw, -5vh, 0) rotate(-30deg) rotateX(50deg);}
+    50% {transform: translate3d(0vw, 0vh, 0) rotate(0deg) rotateX(50deg);}
+    75% {transform: translate3d(-20vw, -5vh, 0) rotate(30deg) rotateX(50deg);}
+    100% {transform: translate3d(0vw, 0vh, 0) rotate(0deg) rotateX(50deg);}
 
 }
