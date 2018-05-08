@@ -223,7 +223,31 @@
     transform-style: preserve-3d;
 }
 
+#starfield-flyer {
+    position: absolute;
+    top: calc(70vh - 7vmin);
+    left: calc(50vw - 7vmin);
+    height: 14vmin;
+    width: 14vmin;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    transform-style: preserve-3d;
+    animation: flyeranim ease-in-out infinite 20s;
+    z-index: 20;
+    box-shadow: 0 0 1vmin white;
+}
+
 @keyframes staranim {
     from {transform: translate3d(50vw, 50vh, -500vmin)};
     to {transform: translate3d(50vw, 50vh, 1000vmin)};
-};
+}
+
+@keyframes flyeranim {
+    25% {transform: translate3d(20vw, -5vh, 0) rotate(-30deg);}
+    50% {transform: translate3d(0vw, 0vh, 0) rotate(0deg);}
+    75% {transform: translate3d(-20vw, -5vh, 0) rotate(30deg);}
+    100% {transform: translate3d(0vw, 0vh, 0) rotate(0deg);}
+
+}
