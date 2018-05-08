@@ -227,8 +227,8 @@
     position: absolute;
     top: calc(70vh - 7vmin);
     left: calc(50vw - 7vmin);
-    height: 14vmin;
     width: 14vmin;
+    height: 14vmin;
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
     border-bottom-left-radius: 20%;
@@ -237,6 +237,18 @@
     animation: flyeranim ease-in-out infinite 20s;
     z-index: 20;
     transform: rotateX(50deg);
+    background-image: url("../img/logo.png");
+    background-size: 100% 100%;
+}
+
+#starfield-flyer-flame {
+    width: 115%;
+    height: 150%;
+    position: absolute;
+    top: 13vmin;
+    left: -10%;
+    transform: rotateX(180deg);
+    transform-origin: 100 50 50;
 }
 
 @keyframes staranim {
