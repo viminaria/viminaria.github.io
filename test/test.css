@@ -234,21 +234,36 @@
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
     transform-style: preserve-3d;
-    animation: flyeranim ease-in-out infinite 20s;
+    animation: flyeranim ease-in-out infinite 15s;
     z-index: 20;
     transform: rotateX(50deg);
+    border: solid #1f1f1f 2px;
+
     background-image: url("../img/logo.png");
     background-size: 100% 100%;
 }
 
-#starfield-flyer-flame {
-    width: 115%;
-    height: 150%;
+.starfield-flyer-particle {
     position: absolute;
-    top: 13vmin;
-    left: -10%;
-    transform: rotateX(180deg);
-    transform-origin: 100 50 50;
+    top: 100%;
+    right: calc(100% - 2vmin);
+    animation: particleanim linear infinite forwards 0.3s;
+    border-radius: 100%;
+    opacity: 0.5;
+    transform-origin: 0 0 0;
+    box-shadow: 0 0 10vmin 1vmin yellow;
+}
+
+.flyaway-button {
+    position: absolute;
+    bottom: calc(40px + 5vmin);
+    right: 5vmin;
+    width: 30vmin;
+    height: 10vh;
+    z-index: 30;
+    font-size: 5vmin;
+    opacity: 0;
+    transform: scale(0);
 }
 
 @keyframes staranim {
@@ -261,5 +276,12 @@
     50% {transform: translate3d(0vw, 0vh, 0) rotate(0deg) rotateX(50deg);}
     75% {transform: translate3d(-20vw, -5vh, 0) rotate(30deg) rotateX(50deg);}
     100% {transform: translate3d(0vw, 0vh, 0) rotate(0deg) rotateX(50deg);}
+}
 
+@keyframes flyawayanim {
+    100% {transform: translate3d(0vw, 0vh, 0) rotate(0deg) rotateX(50deg);}
+}
+
+@keyframes particleanim {
+    100% { opacity: 0; transform: translate3d(6vmin, 20vmin, 0)};
 }

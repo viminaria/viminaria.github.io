@@ -52,13 +52,16 @@
         </div>
       </div>
     </nav>
-    <audio src="src/starfield.ogg" autoplay loop></audio>
-    <div class="altcontent" id="starfield">
-    </div>
-    <div id="starfield-flyer">
-      <img id="starfield-flyer-flame" src="src/flame.gif">
-    </div>
 
+    <audio id="starfield-audio" loop></audio>
+
+    <div class="altcontent" id="starfield"></div>
+    <div id="starfield-flyer-wrapper">
+      <div id="starfield-flyer">
+        <div id="starfield-flyer-flame"></div>
+      </div>
+    </div>
+    <button class="btn flyaway-button" onclick="flyAway()">Fly Away</button>
 
     <footer class="footer">
       <div class="container footercontainer">
@@ -70,9 +73,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
+    <script src="../src/jquery.transit.min.js"></script>
     <script src="src/starfield.js" type="text/javascript"></script>
-    <script>
-    $('audio').prop("volume", 0.4);
-    </script>
   </body>
 </html>
