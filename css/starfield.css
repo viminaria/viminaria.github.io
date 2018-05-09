@@ -7,12 +7,11 @@
 
 .pagenotfound-text-body {
     position: absolute;
-    top: calc(20% - 15vmin);
+    top: calc(30% - 15vmin);
     right: calc(50% - 20vmin);
     width: 40vmin;
     height: 30vmin;
     text-align: center;
-    opacity: 0;
     user-select: none;
     z-index: 35;
 }
