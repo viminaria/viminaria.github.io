@@ -224,17 +224,13 @@
 }
 
 #starfield-flyer {
-    position: absolute;
-    top: calc(70vh - 7vmin);
-    left: calc(50vw - 7vmin);
-    width: 14vmin;
-    height: 14vmin;
+    width: 100%;
+    height: 100%;
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
     transform-style: preserve-3d;
-    animation: flyeranim ease-in-out infinite 15s;
     z-index: 20;
     transform: rotateX(50deg);
     border: solid #1f1f1f 2px;
@@ -246,12 +242,20 @@
 .starfield-flyer-particle {
     position: absolute;
     top: 100%;
-    right: calc(100% - 2vmin);
-    animation: particleanim linear infinite forwards 0.3s;
+    right: calc(100%);
+    animation: particleanim linear infinite forwards 0.2s;
     border-radius: 100%;
     opacity: 0.5;
     transform-origin: 0 0 0;
-    box-shadow: 0 0 10vmin 1vmin yellow;
+    box-shadow: 0 0 10vmin 0.5vmin yellow;
+}
+
+#starfield-flyer-wrapper {
+    position: absolute;
+    top: calc(70vh - 7vmin);
+    left: calc(50vw - 7vmin);
+    width: 14vmin;
+    height: 14vmin;
 }
 
 .flyaway-button {
@@ -290,15 +294,6 @@
     from {transform: translate3d(50vw, 50vh, -500vmin)};
     to {transform: translate3d(50vw, 50vh, 1000vmin)};
 }
-
-/*
-@keyframes flyeranim {
-    25% {transform: translate3d(20vw, -5vh, 0) rotate(-30deg) rotateX(50deg);}
-    50% {transform: translate3d(0vw, 0vh, 0) rotate(0deg) rotateX(50deg);}
-    75% {transform: translate3d(-20vw, -5vh, 0) rotate(30deg) rotateX(50deg);}
-    100% {transform: translate3d(0vw, 0vh, 0) rotate(0deg) rotateX(50deg);}
-}
-*/
 
 @keyframes particleanim {
     100% { opacity: 0; transform: translate3d(6vmin, 20vmin, 0)};
