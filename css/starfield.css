@@ -8,8 +8,8 @@
 .pagenotfound-text-body {
     position: absolute;
     top: calc(30% - 15vmin);
-    right: calc(50% - 20vmin);
-    width: 40vmin;
+    right: calc(50% - 30vmin);
+    width: 60vmin;
     height: 30vmin;
     text-align: center;
     user-select: none;
@@ -17,7 +17,7 @@
 }
 
 #pagenotfound-header {
-    font-size: 10vmin;
+    font-size: 15vmin;
     color: white;
     margin: 0;
 }
@@ -29,7 +29,7 @@
 }
 
 #flyaway-link {
-    font-size: 7vmin;
+    font-size: 5vmin;
     margin: 0;
 }
 
