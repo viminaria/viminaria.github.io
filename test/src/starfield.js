@@ -3,8 +3,8 @@ audio.src = "src/starfield.ogg"
 $('audio').prop("volume", 0.1);
 audio.play();
 
-var starcount = 250;
-var particlecount = 20;
+var starcount = 100;
+var particlecount = 15;
 var styletag = document.createElement("style");
 var particlestyletag = document.createElement("style");
 document.head.appendChild(styletag);
@@ -39,18 +39,31 @@ for (i=1; i<=particlecount; i++){
     particlecss.insertRule('.starfield-flyer-particle:nth-child('+ i +'){width: '+ particlesize +'vmin; height: '+ particlesize +'vmin;transform: translate3d('+ trans3d +');animation-delay:'+ animdelay +'s;background-color: yellow;}', 0);
 }
 
-$(document).ready(function flyAround() {
+function flyAround() {
 $('#starfield-flyer').transition({y:'-5vh', x:'+20vw', rotate: '-30deg', rotateX: '50deg', delay: 500}, 2500, 'ease-in-out')
 .transition({y:'0vh', x:'0vw', rotate: '0deg', rotateX: '50deg', delay: 500}, 2500, 'ease-in-out')
 .transition({y:'-5vh', x:'-20vw', rotate: '30deg', rotateX: '50deg', delay: 500}, 2500, 'ease-in-out')
 .transition({y:'0vh', x:'0vw', rotate: '0deg', rotateX: '50deg', delay: 500, complete: function(){flyAround();}}, 2500, 'ease-in-out')
-});
+}
 
 $('.flyaway-button').transition({scale: 1, opacity: 1, delay: 5000}, 500);
 
 function flyAway(){
     $('#starfield-flyer').clearQueue();
-    $('#starfield-flyer').transition({y:'-18vh', x:'0vw', scale: 0.01, rotate: '0deg', rotateX: '50deg'}, 1000, 'ease-in')
-    .transition({opacity: 0}, 100);
-    $('.flyaway-button').transition({opacity: 0}, 1000);
+    $('#starfield-flyer').transition({y:'-18vh', x:'0vw', scale: 0.01, rotate: '0deg', rotateX: '80deg'}, 2000, 'ease-in')
+    .transition({opacity: 0}, 100)
+    .transition({y:'50vh', x:'0vw', scale: 2, rotate: '0deg', rotateX: '50deg'}, 100)
+    $('.flyaway-button').transition({opacity: 0}, 1000)
+    .transition({scale: 0}, 100);
+    $('.flyback-link').transition({scale: 1, opacity: 1, delay: 4000}, 500);
 }
+
+function flyBack(){
+    $('#starfield-flyer').transition({opacity: 1}, 100)
+    .transition({y:'0vh', x:'0vw', scale: 1, rotate: '0deg', rotateX: '50deg', complete: function(){flyAround();}}, 2500, 'ease-in-out');
+    $('.flyaway-button').transition({scale: 1, opacity: 1, delay: 5000}, 500);
+    $('.flyback-link').transition({opacity: 0}, 1000)
+    .transition({scale: 0}, 100);
+}
+
+flyAround();

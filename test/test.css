@@ -266,6 +266,26 @@
     transform: scale(0);
 }
 
+.flyback-link {
+    position: absolute;
+    top: calc(50% - 5vmin);
+    right: calc(50% - 20vmin);
+    width: 40vmin;
+    height: 10vmin;
+    font-size: 7vmin;
+    line-height: 10vmin;
+    text-align: center;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.starfield-body {
+    overflow: hidden;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
 @keyframes staranim {
     from {transform: translate3d(50vw, 50vh, -500vmin)};
     to {transform: translate3d(50vw, 50vh, 1000vmin)};
