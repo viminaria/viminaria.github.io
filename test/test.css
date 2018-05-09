@@ -271,16 +271,14 @@
     to {transform: translate3d(50vw, 50vh, 1000vmin)};
 }
 
+/*
 @keyframes flyeranim {
     25% {transform: translate3d(20vw, -5vh, 0) rotate(-30deg) rotateX(50deg);}
     50% {transform: translate3d(0vw, 0vh, 0) rotate(0deg) rotateX(50deg);}
     75% {transform: translate3d(-20vw, -5vh, 0) rotate(30deg) rotateX(50deg);}
     100% {transform: translate3d(0vw, 0vh, 0) rotate(0deg) rotateX(50deg);}
 }
-
-@keyframes flyawayanim {
-    100% {transform: translate3d(0vw, 0vh, 0) rotate(0deg) rotateX(50deg);}
-}
+*/
 
 @keyframes particleanim {
     100% { opacity: 0; transform: translate3d(6vmin, 20vmin, 0)};
