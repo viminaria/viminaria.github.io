@@ -6,10 +6,10 @@ permalink: /404.html
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="donate page">
+    <meta name="description" content="404 page">
     <meta name="author" content="viminaria">
-    <meta name="keywords" content="viminaria,donate,cryptocurrency">
-    <title>donate - viminaria</title>
+    <meta name="keywords" content="viminaria,path of exile, 404">
+    <title>page not found - viminaria</title>
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     <meta property="og:site_name" content="viminaria.github.io" />
@@ -19,7 +19,7 @@ permalink: /404.html
     <meta property="og:image:height" content="300">
     <meta property="og:image:alt" content="logo">
     <meta property="og:title" content="donate" />
-    <meta property="og:description" content="pls gibe moni" />
+    <meta property="og:description" content="404 page not found" />
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha256-m/h/cUDAhf6/iBRixTbuc8+Rg2cIETQtPcH9D3p2Kg0=" crossorigin="anonymous" />
@@ -27,16 +27,11 @@ permalink: /404.html
     <!-- pace page loader -->
     <link href="https://viminaria.github.io/css/pace.css" rel="stylesheet">
     <script src="https://viminaria.github.io/src/pace.min.js"></script>
-    
-    <!-- scrolling -->
-    <link rel="stylesheet" href="https://viminaria.github.io/css/aos.css">
-
-    <!-- particles css -->
-    <link rel="stylesheet" media="screen" href="https://viminaria.github.io/css/particles.css">
 
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://viminaria.github.io/css/full.css" rel="stylesheet">
+    <link href="https://viminaria.github.io/css/starfield.css" rel="stylesheet">
   </head>
   <body>
     <!-- Navigation -->
@@ -58,72 +53,74 @@ permalink: /404.html
         </div>
       </div>
     </nav>
-    <!-- content -->    
-    <div id="particles-js" data-aos="fade" data-aos-duration="1500"></div>
     
-    <div class="content donatecontainer" data-aos="fade" data-aos-duration="1500">
-      <h2 class="centered errorheader">404</h2>
-      <p class="portheader centered">You dun goofed</p>
-      <a href="https://viminaria.github.io" style="width: 100%;"><p class="centered">back to home</p></a>
+    <div class="starfield-body">
+      <div class="altcontent" id="starfield"></div>
+      <div id="starfield-flyer-wrapper">
+        <div id="starfield-flyer"></div>
+      </div>
     </div>
+    <div class="pagenotfound-text-body">
+      <h2>404</h2>
+      <h3>page not found</h3>
+      <a href="#" id="flyaway-link" onclick="flyAway()">back to home</a>
+    </div>
+
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha256-DiWJXXyq81WlPRnDfGmgYZj2aOVCKyEdJ1l+2TmDuAs=" crossorigin="anonymous"></script>
-    <script>
-      $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip(); 
-      });
-    </script>
-    <!-- particles -->
-    <script src="https://viminaria.github.io/src/particles.js"></script>
-    <script src="https://viminaria.github.io/src/app.js"></script>
-    <script src="https://viminaria.github.io/src/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script>
-    function copyToClipboard(text, el) {
-      var copyTest = document.queryCommandSupported('copy');
-      var elOriginalText = el.attr('data-original-title');
+    <script src="https://viminaria.github.io/src/jquery.transit.min.js"></script>
+    <script defer>
+      var starcount = 150;
+      var particlecount = 40;
+      var styletag = document.createElement("style");
+      var particlestyletag = document.createElement("style");
+      document.head.appendChild(styletag);
+      document.head.appendChild(particlestyletag);
+      var starcss = styletag.sheet;
+      var particlecss = particlestyletag.sheet;
 
-      if (copyTest === true) {
-        var copyTextArea = document.createElement("textarea");
-        copyTextArea.value = text;
-        document.body.appendChild(copyTextArea);
-        copyTextArea.select();
-        try {
-          var successful = document.execCommand('copy');
-          var msg = successful ? 'Copied!' : 'Whoops, not copied!';
-          el.attr('data-original-title', msg).tooltip('show');
-        } catch (err) {
-          console.log('Oops, unable to copy');
-        }
-        document.body.removeChild(copyTextArea);
-        el.attr('data-original-title', elOriginalText);
-      } else {
-        // Fallback if browser doesn't support .execCommand('copy')
-        window.prompt("Copy to clipboard: Ctrl+C or Command+C, Enter", text);
+
+      for (i=1; i<=starcount; i++){
+          $('#starfield').append('<div class="starfield-star"></div>');
+          var starsize = 2 + Math.random()*10;
+          var starcolorrand = 1 + Math.random()*10;
+          var animdelay = Math.floor(Math.random()*-400);
+          var animdur = 40 - starsize*3;
+
+          if (starcolorrand > 10){ starcolor = "rgb(210, 210, 255)"; }
+          else if (starcolorrand > 7){ starcolor = "rgb(255, 255, 220)"; }
+          else if (starcolorrand > 5){ starcolor = "rgb(255, 255, 180)"; }
+          else if (starcolorrand > 3){ starcolor = "rgb(255, 180, 180)"; }
+          else { starcolor = "white"; }
+
+          var trans3d = Math.floor(Math.random()*400-starcolorrand*25) + "vw, " + Math.floor(Math.random()*400-starcolorrand*25) + "vh, " + Math.floor(Math.random()*100) + "vmin";
+          starcss.insertRule('.starfield-star:nth-child('+ i +'){width: '+ starsize +'vmin; height: '+ starsize +'vmin;transform: translate3d('+ trans3d +');background-color:'+ starcolor +';box-shadow: 0px 0px 12vmin '+ starsize/3 +'vmin '+ starcolor +';animation-delay:'+ animdelay +'s;animation-duration:' + animdur + 's;}', 0);
       }
-    }
 
-    $(document).ready(function() {
-      // Initialize
-      // ---------------------------------------------------------------------
+      for (i=1; i<=particlecount; i++){
+          $('#starfield-flyer').append('<div class="starfield-flyer-particle"></div>');
+          var particlesize = 0.5 + Math.random();
+          var animdelay = -Math.random();
 
-      // Tooltips
-      // Requires Bootstrap 3 for functionality
-      $('.js-tooltip').tooltip();
+          var trans3d = Math.random()*14 + "vmin, " + "0, " + " 0";
+          particlecss.insertRule('.starfield-flyer-particle:nth-child('+ i +'){width: '+ particlesize +'vmin; height: '+ particlesize +'vmin;transform: translate3d('+ trans3d +');animation-delay:'+ animdelay +'s;background-color: yellow;}', 0);
+      }
 
-      // Copy to clipboard
-      // Grab any text in the attribute 'data-copy' and pass it to the 
-      // copy function
-      $('.js-copy').click(function() {
-        var text = $(this).attr('data-copy');
-        var el = $(this);
-        copyToClipboard(text, el);
+      function flyAway(){
+          $('#starfield-flyer-wrapper').transition({y:'-18vh', x:'0vw', scale: 0.01, rotate: '0deg', rotateX: '80deg'}, 2000, 'ease-in')
+          .transition({opacity: 0, complete: function(){window.location.assign("https://viminaria.github.io");}}, 100);
+          $('#flyaway-link').transition({opacity: 0}, 1000);
+      }
+
+      $(document).ready(function flyAround() {
+          $('#starfield-flyer').transition({y:'-2vh', x:'+15vw', rotate: '-30deg', rotateX: '50deg'}, 2000, 'ease-out');
+          $('#starfield-flyer').transition({y:'0vh', x:'0vw', rotate: '0deg', rotateX: '50deg'}, 2000, 'ease-in');
+          $('#starfield-flyer').transition({y:'-2vh', x:'-15vw', rotate: '30deg', rotateX: '50deg'}, 2000, 'ease-out');
+          $('#starfield-flyer').transition({y:'0vh', x:'0vw', rotate: '0deg', rotateX: '50deg', complete: function(){flyAround();}}, 2000, 'ease-in');
       });
-    });
     </script>
+
   </body>
 </html>
