@@ -281,6 +281,7 @@
     text-align: center;
     transform: scale(0);
     opacity: 0;
+    user-select: none;
 }
 
 .starfield-body {
