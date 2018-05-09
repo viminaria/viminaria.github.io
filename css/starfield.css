@@ -20,16 +20,19 @@
     font-size: 15vmin;
     color: white;
     margin: 0;
+    font-style: bold;
 }
 
 #pagenotfound-text {
-    font-size: 6vmin;
+    font-size: 5vmin;
     color: white;
     margin: 0;
+    font-style: italic;
 }
 
 #flyaway-link {
-    font-size: 5vmin;
+    margin-top: 10px;
+    font-size: 4vmin;
     margin: 0;
 }
 
