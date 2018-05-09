@@ -1,3 +1,10 @@
+.starfield-body {
+    overflow: hidden;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
 #starfield {
     width: 100vw;
     height: Calc(100vh - 100px);
@@ -18,6 +25,14 @@
     box-sizing: border-box;
     animation: staranim linear infinite;
     transform-style: preserve-3d;
+}
+
+#starfield-flyer-wrapper {
+    position: absolute;
+    top: calc(70vh - 7vmin);
+    left: calc(50vw - 7vmin);
+    width: 14vmin;
+    height: 14vmin;
 }
 
 #starfield-flyer {
@@ -47,14 +62,6 @@
     box-shadow: 0 0 10vmin 0.5vmin yellow;
 }
 
-#starfield-flyer-wrapper {
-    position: absolute;
-    top: calc(70vh - 7vmin);
-    left: calc(50vw - 7vmin);
-    width: 14vmin;
-    height: 14vmin;
-}
-
 .pagenotfound-text-body {
     position: absolute;
     top: calc(20% - 15vmin);
@@ -62,16 +69,10 @@
     width: 40vmin;
     height: 30vmin;
     font-size: 7vmin;
+    color: white;
     text-align: center;
     opacity: 0;
     user-select: none;
-}
-
-.starfield-body {
-    overflow: hidden;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
 }
 
 @keyframes staranim {
