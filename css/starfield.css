@@ -5,6 +5,34 @@
     width: 100vw;
 }
 
+.pagenotfound-text-body {
+    position: absolute;
+    top: calc(20% - 15vmin);
+    right: calc(50% - 20vmin);
+    width: 40vmin;
+    height: 30vmin;
+    text-align: center;
+    opacity: 0;
+    user-select: none;
+}
+
+#pagenotfound-header {
+    font-size: 10vmin;
+    color: white;
+    margin: 0;
+}
+
+#pagenotfound-text {
+    font-size: 7vmin;
+    color: white;
+    margin: 0;
+}
+
+#flyaway-link {
+    font-size: 7vmin;
+    margin: 0;
+}
+
 #starfield {
     width: 100vw;
     height: Calc(100vh - 100px);
@@ -60,19 +88,6 @@
     opacity: 0.5;
     transform-origin: 0 0 0;
     box-shadow: 0 0 10vmin 0.5vmin yellow;
-}
-
-.pagenotfound-text-body {
-    position: absolute;
-    top: calc(20% - 15vmin);
-    right: calc(50% - 20vmin);
-    width: 40vmin;
-    height: 30vmin;
-    font-size: 7vmin;
-    color: white;
-    text-align: center;
-    opacity: 0;
-    user-select: none;
 }
 
 @keyframes staranim {
