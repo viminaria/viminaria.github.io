@@ -72,7 +72,7 @@
     .maple-header {
         position: relative;
         top: 2vh;
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         font-weight: bold;
     }
 
@@ -101,6 +101,5 @@
     }
 
     .disclaimer {
-        position: sticky;
-        bottom: 0;
+        display: none;
 }
