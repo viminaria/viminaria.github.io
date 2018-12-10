@@ -14,7 +14,7 @@ function weightedRand(spec) {
         return table[Math.floor(Math.random() * table.length)];
     }
 }
-var prizeroll = weightedRand({0:0.3, 1:0.25, 2:0.2, 3:0.1, 4:0.06, 5:0.05, 6:0.039, 7:0.001});
+var prizeroll = weightedRand({0:0.3, 1:0.21, 2:0.25, 3:0.1, 4:0.06, 5:0.04, 6:0.035, 7:0.005});
 
 for(i=1; i<=24; i++) {
 $("#maple-calendar-body").append('<div id="' + i + '" class="maple-slot" onclick="openBox(this)"><p class="maple-box-number">' + i + '</p></div>')
