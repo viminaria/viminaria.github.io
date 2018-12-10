@@ -1,7 +1,7 @@
 var d = new Date();
 var day = d.getDate();
 var month = d.getMonth() + 1;
-var prizelist = ["10x Power Elixir", "5x Nodestone", "20x Nodestone", "10x Arcane River Droplet", "1x Rudolph Pet (Permanent)", "1x Frenzy Totem"];
+var prizelist = ["10x Power Elixir", "500x Spell Trace", "5x Nodestone", "20x Nodestone", "1x Eternal Rebirth Flame", "10x Arcane River Droplet", "1x Rudolph Pet (Permanent)", "1x Frenzy Totem"];
 
 function weightedRand(spec) {
     var i, j, table=[];
@@ -14,7 +14,7 @@ function weightedRand(spec) {
         return table[Math.floor(Math.random() * table.length)];
     }
 }
-var prizeroll = weightedRand({0:0.4, 1:0.35, 2:0.2, 3:0.065, 4:0.049, 5:0.001});
+var prizeroll = weightedRand({0:0.3, 1:0.25, 2:0.2, 3:0.1, 4:0.06, 5:0.05, 6:0.039, 7:0.001});
 
 for(i=1; i<=24; i++) {
 $("#maple-calendar-body").append('<div id="' + i + '" class="maple-slot" onclick="openBox(this)"><p class="maple-box-number">' + i + '</p></div>')
