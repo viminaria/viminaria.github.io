@@ -24,11 +24,19 @@ if (month == 12){
     for(i=1; i<=day; i++) {
         $('#'+ i ).css({"border": "dotted 2px white"});
     }
+} else {
+    $(".december-button").fadeIn(800);
 }
 
 function setDecember(){
     month = 12;
     day = 24;
+
+    for(i=1; i<=day; i++) {
+        $('#'+ i ).css({"border": "dotted 2px white"});
+    }
+
+    $(".december-button").fadeOut(800);
 }
 
 function openBox(nbr) {
