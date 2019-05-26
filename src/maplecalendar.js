@@ -25,7 +25,7 @@ if (month == 12){
         $('#'+ i ).css({"border": "dotted 2px white"});
     }
 } else {
-    $(".december-button").fadeIn(800);
+    $(".december-button").css({"display": "inline"});
 }
 
 function setDecember(){
@@ -36,7 +36,7 @@ function setDecember(){
         $('#'+ i ).css({"border": "dotted 2px white"});
     }
 
-    $(".december-button").fadeOut(800);
+    $(".december-button").css({"display": "none"});
 }
 
 function openBox(nbr) {
