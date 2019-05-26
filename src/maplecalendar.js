@@ -28,6 +28,7 @@ if (month == 12){
 
 function setDecember(){
     month = 12;
+    day = 24;
 }
 
 function openBox(nbr) {
