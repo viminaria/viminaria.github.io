@@ -26,6 +26,10 @@ if (month == 12){
     }
 }
 
+function setDecember(){
+    month = 12;
+}
+
 function openBox(nbr) {
     if (month !== 12) {
         alert("Please wait until December");
