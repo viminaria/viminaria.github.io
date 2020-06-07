@@ -1,0 +1,41 @@
+.guildemblem-body {
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    background-image: url("../img/guildemblem/guild_emblem_lach_bg.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+#input_wrapper {
+    color: white;
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    top: 2vh;
+    font-size: 1.4rem;
+    padding: 0 1vw;
+}
+
+#previewHolder {
+    position: absolute;
+    top: calc(8vw + 50.6vh);
+    left: 45.8vw;
+    height: 2vw;
+    width: 2vw;
+    image-rendering: pixelated;
+    object-fit: fill;
+}
+
+
+
+@media only screen and (orientation : portrait) {    
+    #previewHolder {
+        top: 64.7vh;
+        left: 20.5vh;
+        height: 3.5vh;
+        width: 3.5vh;
+    }
+}

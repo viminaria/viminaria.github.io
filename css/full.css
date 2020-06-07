@@ -939,7 +939,7 @@ progress::-webkit-progress-value {
 }
 
 
-@media (max-width: 1080px){
+@media (max-width: 768px){
   .donateheader {
     font-size: 3em;
   }
