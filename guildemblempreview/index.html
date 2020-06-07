@@ -35,9 +35,10 @@
   <body>
     <div class="guildemblem-body">
       <div id="input_wrapper">
-          <input type="file" name="guildemblem_upload" value="" id="guildemblem_upload" class="required borrowerImageFile" data-errormsg="PhotoUploadErrorMsg">
+        <input id="upload-Image" type="file" onchange="loadImageFile();" />
       </div>
-      <img id="previewHolder" alt="Uploaded Image Preview Holder" width="17px" height="17px" src="../img/guildemblem/logo.png"/>
+      <img id="original-Img">
+      <img id="upload-Preview" alt="Uploaded Image Preview Holder" width="17px" height="17px" src="../img/guildemblem/logo.png"/>
       <h3 class="centerheader disclaimer text-muted">please use 17x17 images for a more accurate in-game representation</h3>
     </div>
 

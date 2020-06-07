@@ -19,7 +19,11 @@
     padding: 0 1vw;
 }
 
-#previewHolder {
+#original-Img {
+    display: none;
+}
+
+#upload-Preview {
     position: absolute;
     top: calc(8vw + 50.9vh);
     left: 45.9vw;
