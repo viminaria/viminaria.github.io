@@ -14,24 +14,24 @@
     position: absolute;
     width: 100vw;
     text-align: center;
-    top: 6vh;
+    top: 1vh;
     font-size: 1.4rem;
     padding: 0 1vw;
 }
 
 #previewHolder {
     position: absolute;
-    top: calc(8vw + 50.6vh);
-    left: 45.8vw;
-    height: 2vw;
-    width: 2vw;
+    top: calc(8vw + 50.9vh);
+    left: 45.9vw;
+    height: 1.8vw;
+    width: 1.8vw;
     image-rendering: pixelated;
     object-fit: fill;
 }
 
 .disclaimer {
     position: absolute;
-    top: 0;
+    top: 5vh;
     width: 100vw;
     font-size: 1rem;
     text-shadow: 3px 3px 1.5rem black;
@@ -39,8 +39,8 @@
 
 @media only screen and (orientation : portrait) {    
     #previewHolder {
-        top: 64.7vh;
-        left: 20.5vh;
+        top: 64.8vh;
+        left: 36.8vw;
         height: 3.5vh;
         width: 3.5vh;
     }
