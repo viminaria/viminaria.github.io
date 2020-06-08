@@ -1,6 +1,8 @@
 .guildemblem-body {
     width: 100vw;
     height: 100vh;
+    margin: 0;
+    padding: 0;
     background-color: gray;
     background-image: url("../img/guildemblem/guild_emblem_lach_bg.png");
     background-position: 50% 50%;
@@ -13,10 +15,16 @@
     color: white;
     position: absolute;
     width: 100vw;
+    margin: 0;
     text-align: center;
-    top: 1vh;
+    top: 2vh;
     font-size: 1.4rem;
     padding: 0 1vw;
+}
+
+input {
+    width: auto;
+    max-width: 100vw;
 }
 
 #original-Img {
@@ -35,15 +43,16 @@
 
 .disclaimer {
     position: absolute;
-    top: 5vh;
+    top: 7vh;
     width: 100vw;
+    margin: 0;
     font-size: 1rem;
     text-shadow: 3px 3px 1.5rem black;
 }
 
 @media only screen and (orientation : portrait) {    
-    #previewHolder {
-        top: 64.8vh;
+    #upload-Preview {
+        top: 115.3vw;
         left: 36.8vw;
         height: 3.5vh;
         width: 3.5vh;
