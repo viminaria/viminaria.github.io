@@ -1011,3 +1011,50 @@ code {
 .downloadlist li {
   margin: 10px 0;
 }
+
+/* Downtime */
+
+.downtimecontainer {
+  margin: auto;
+  user-select: none;
+  margin-top: 10vh;
+}
+
+.downtimeheader {
+  font-size: 5em;
+  margin: 10vh;
+}
+
+.downtimenotice {
+  font-size: 3em;
+  width: 100%;
+}
+
+@media (max-width: 1400px){
+  .downtimeheader {
+    font-size: 3.5em;
+    margin: 3%;
+  } 
+
+  .downtimenotice {
+    font-size: 3em;
+  }
+}
+
+
+@media (max-width: 768px){
+
+  .downtimecontainer {
+    margin: auto;
+    user-select: none;
+    margin-top: 20vh;
+  }
+
+  .downtimeheader {
+    font-size: 3em;
+  }
+
+  .downtimenotice {
+    font-size: 0.8em;
+  }
+}
