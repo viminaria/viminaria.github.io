@@ -748,9 +748,6 @@ AUDIOPLAYER
   overflow:hidden;
 } 
 
-.audioplayer-row {
-  height:100%;
-}
 
 .player {
   position:absolute;
@@ -858,7 +855,7 @@ AUDIOPLAYER
   height: 18px;
   z-index: 10;
   position: absolute;
-  bottom: 35px;
+  bottom: 165px;
 }
 
 .selectedaudio {
