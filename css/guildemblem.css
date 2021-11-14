@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     background-color: gray;
-    background-image: url("../img/guildemblem/guild_emblem_lach_bg.png");
+    background-image: url("../img/guildemblem/guild_emblem_arcana_bg.png");
     background-position: 50% 50%;
     background-size: cover;
     overflow: hidden;
@@ -33,8 +33,8 @@ input {
 
 #upload-Preview {
     position: absolute;
-    top: calc(8vw + 50.9vh);
-    left: 45.9vw;
+    top: calc(5vw + 53.3vh);
+    left: 45.8vw;
     height: 1.8vw;
     width: 1.8vw;
     image-rendering: pixelated;
